@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.unitywasapiaudiomaster.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Dale 2.0\\Downloads\\UnityWasapiAudio-master\\UnityWasapiAudio-master\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "UnityWasapiAudio-master [Testing]"
+        }
+      }
+    }
+  ]
+}

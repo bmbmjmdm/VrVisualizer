@@ -1,0 +1,201 @@
+using Assets.WasapiAudio.Scripts.Unity;
+using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Assets.Scripts
+{
+    public class RainSpectrum : AudioVisualizationEffect
+    {
+
+        public GameObject Prefab;
+        public float AudioScale = 1.0f;
+        public float Power = 1.0f;
+        // increases the threshold for a frequency to be considered a beat
+        public float thresholdMultiplier = 1;
+        public float thresholdMultiplierTotal = 1;
+        // the size of the window (in frames) we look at to determine average frequency amplitude when determining if a given frequency is significant (a beat)
+        public float thresholdWindowSize = 30;
+
+
+        private List<float> curSpectrum = new List<float>();
+        private List<float> prevSpectrum = new List<float>();
+        private List<List<SpectralFluxInfo>> spectralFluxSamples = new List<List<SpectralFluxInfo>>();
+        private List<SpectralFluxInfo> spectralFluxSamplesTotal = new List<SpectralFluxInfo>();
+        private int indexToProcess = 1;
+        private int indexToProcessTotal = 1;
+
+        public void Start()
+        {
+            for (int frequency = 0; frequency < SpectrumSize; frequency++) {
+                spectralFluxSamples.Add(new List<SpectralFluxInfo>());
+            }
+        }
+
+        public void Update()
+        {
+            var spectrum = GetSpectrumData().ToList();
+            // Set spectrum
+            setCurSpectrum(spectrum);
+            bool peaked = false;
+            bool peakedTotal = false;
+            bool alreadyIndexed = false;
+
+            for (int frequency = 0; frequency < SpectrumSize; frequency++) {
+                // Get current spectral flux from spectrum
+                SpectralFluxInfo curInfo = new SpectralFluxInfo();
+                //curInfo.time = time; we dont have time component atm
+                curInfo.spectralFlux = calculateRectifiedSpectralFlux(frequency);
+                spectralFluxSamples[frequency].Add(curInfo);
+
+                // We have enough samples to detect a peak
+                if (spectralFluxSamples[frequency].Count >= thresholdWindowSize) {
+                    // Get Flux threshold of time window surrounding index to process
+                    spectralFluxSamples[frequency][indexToProcess].threshold = getFluxThreshold(indexToProcess, frequency);
+
+                    // Only keep amp amount above threshold to allow peak filtering
+                    spectralFluxSamples[frequency][indexToProcess].prunedSpectralFlux = getPrunedSpectralFlux(indexToProcess, frequency);
+
+                    // Now that we are processed at n, n-1 has neighbors (n-2, n) to determine peak
+                    int indexToDetectPeak = indexToProcess - 1;
+
+                    bool curPeak = isPeak(indexToDetectPeak, frequency);
+
+                    if (curPeak) {
+                        spectralFluxSamples[frequency][indexToDetectPeak].isPeak = true;
+                        peaked = true;
+                    }
+
+                    if (!alreadyIndexed) {
+                        alreadyIndexed = true;
+                        indexToProcess++;
+                    }
+                }
+                else {
+                    Debug.Log(string.Format("Not ready yet.  At spectral flux sample size of {0} growing to {1}", spectralFluxSamples[frequency].Count, thresholdWindowSize));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////// now do it all again for the totals
+            // Get current spectral flux from spectrum
+            SpectralFluxInfo curInfoTotal = new SpectralFluxInfo();
+            //curInfo.time = time; we dont have time component atm
+            curInfoTotal.spectralFlux = calculateRectifiedSpectralFlux(-1);
+            spectralFluxSamplesTotal.Add(curInfoTotal);
+
+            // We have enough samples to detect a peak
+            if (spectralFluxSamplesTotal.Count >= thresholdWindowSize) {
+                // Get Flux threshold of time window surrounding index to process
+                spectralFluxSamplesTotal[indexToProcessTotal].threshold = getFluxThreshold(indexToProcessTotal, -1);
+
+                // Only keep amp amount above threshold to allow peak filtering
+                spectralFluxSamplesTotal[indexToProcessTotal].prunedSpectralFlux = getPrunedSpectralFlux(indexToProcessTotal, -1);
+
+                // Now that we are processed at n, n-1 has neighbors (n-2, n) to determine peak
+                int indexToDetectPeakTotal = indexToProcessTotal - 1;
+
+                bool curPeak = isPeak(indexToDetectPeakTotal, -1);
+
+                if (curPeak) {
+                    spectralFluxSamplesTotal[indexToDetectPeakTotal].isPeak = true;
+                    peakedTotal = true;
+                }
+
+                indexToProcessTotal++;
+            }
+            else {
+                Debug.Log(string.Format("Not ready yet.  At spectral flux sample size of {0} growing to {1}", spectralFluxSamplesTotal.Count, thresholdWindowSize));
+            }
+
+
+
+
+            /////////////////////////////////////////////////////////////////////////// try to animate
+            if (peaked && peakedTotal) {
+                Transform t = new GameObject().transform;
+                // could also call these position.y, position.x, position.z
+                t.position = new Vector3(0,0,5);
+                Instantiate(Prefab, t.position, t.rotation);
+            }
+        }
+
+        // keep history of spectrum data
+        public void setCurSpectrum(List<float> spectrum) {
+            for (int i = 0; i < spectrum.Count; i++) {
+                spectrum[i] = Mathf.Pow(spectrum[i] * AudioScale, Power);
+            }
+            prevSpectrum = new List<float>(curSpectrum);
+            curSpectrum = new List<float>(spectrum);
+        }
+
+        // this sums the entire spectrum to find the positive change of the current spectrum to the previous one
+        // TODO individual frequencies as opposed to entire spectrum
+        float calculateRectifiedSpectralFlux(int frequency) {
+            if (frequency > -1) {
+                return Mathf.Max (0f, curSpectrum[frequency] - prevSpectrum [frequency]);
+            }
+            else {
+                float sum = 0f;
+                for (int i = 0; i < SpectrumSize; i++) {
+                    sum += Mathf.Max (0f, curSpectrum [i] - prevSpectrum [i]);
+                }
+                return sum;
+            }
+        }
+
+        // This tells us the threshold value that a calculateRectifiedSpectralFlux needs to surpass before it's considered significant (aka a beat)
+        float getFluxThreshold(int spectralFluxIndex, int frequency) {
+            var samples = spectralFluxSamplesTotal;
+            float multiplier = thresholdMultiplierTotal;
+            if (frequency > -1) {
+                samples = spectralFluxSamples[frequency];
+                multiplier = thresholdMultiplier;
+
+            }
+            // How many samples in the past and future we include in our average
+            int windowStartIndex = (int) Mathf.Max (0, spectralFluxIndex - thresholdWindowSize / 2);
+            int windowEndIndex = (int) Mathf.Min (samples.Count - 1, spectralFluxIndex + thresholdWindowSize / 2);
+
+            // Add up our spectral flux over the window
+            float sum = 0f;
+            for (int i = windowStartIndex; i < windowEndIndex; i++) {
+                sum += samples[i].spectralFlux;
+            }
+
+            // Return the average multiplied by our sensitivity multiplier
+            float avg = sum / (windowEndIndex - windowStartIndex);
+            return avg * multiplier;
+        }
+
+        // this nullifies any spectral flux that is below our threshold
+        float getPrunedSpectralFlux(int spectralFluxIndex, int frequency) {
+            var samples = spectralFluxSamplesTotal;
+            if (frequency > -1) {
+                samples = spectralFluxSamples[frequency];
+            }
+            return Mathf.Max (0f, samples[spectralFluxIndex].spectralFlux - samples[spectralFluxIndex].threshold);
+        }
+        
+        // determines if a spectral flux is significant by comparing it to its immediate neighbors
+        bool isPeak(int spectralFluxIndex, int frequency) {
+            var samples = spectralFluxSamplesTotal;
+            if (frequency > -1) {
+                samples = spectralFluxSamples[frequency];
+            }
+            if (samples[spectralFluxIndex].prunedSpectralFlux > samples[spectralFluxIndex + 1].prunedSpectralFlux &&
+                samples[spectralFluxIndex].prunedSpectralFlux > samples[spectralFluxIndex - 1].prunedSpectralFlux) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public class SpectralFluxInfo {
+            //public float time; we dont have time atm
+            public float spectralFlux;
+            public float threshold;
+            public float prunedSpectralFlux;
+            public bool isPeak;
+        }
+    }
+}
