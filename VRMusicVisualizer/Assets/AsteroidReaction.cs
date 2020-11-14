@@ -42,19 +42,23 @@ public class AsteroidReaction : MonoBehaviour
                 }
                 // select the relative location of the group so they spawn together
                 float ranDistance = UnityEngine.Random.Range(1.0f, 40.0f);
+                // This places a random point directly in front of the user, up to 20 units away
+                // It then finds another point within (+-40,+-40,+-40)/1.25 of that first point 
+                Vector3 pointAlongVisionLine = player.transform.position + fwd * ranDistance;
+                pointAlongVisionLine += Vector3.up * UnityEngine.Random.Range(-ranDistance/1.25f, ranDistance/1.25f);
+                pointAlongVisionLine += Vector3.right * UnityEngine.Random.Range(-ranDistance/1.25f, ranDistance/1.25f);
+                pointAlongVisionLine += Vector3.forward * UnityEngine.Random.Range(-ranDistance/1.25f, ranDistance/1.25f);
                 // spawn a group of 3-7
-                for (int ii = 0; ii < UnityEngine.Random.Range(3, 7); ii++) {
+                for (int ii = 0; ii < UnityEngine.Random.Range(1, 8); ii++) {
                     // exclusive so dont have to do Length-1
                     int ranObj = UnityEngine.Random.Range(0, asteroids.Length);
+                    // Spawns an asteroid within (+-2, +-2, +-2) of that second point we selected, where it flies in asteroid_movement.cs
+                    Vector3 oneOfManyPosition = new Vector3(pointAlongVisionLine.x, pointAlongVisionLine.y, pointAlongVisionLine.z);
+                    oneOfManyPosition += Vector3.up * UnityEngine.Random.Range(-2, 3);
+                    oneOfManyPosition += Vector3.right * UnityEngine.Random.Range(-2, 3);
+                    oneOfManyPosition += Vector3.forward * UnityEngine.Random.Range(-2, 3);
                     GameObject prefab = asteroids[ranObj];
-                    // This places a random point directly in front of the user, up to 20 units away
-                    // It then finds another point within (+-2,+-2,+-2) of that first point 
-                    // It spawns an asteroid at that second point, where it flies in asteroid_movement.cs
-                    Vector3 pointAlongVisionLine = player.transform.position + fwd * ranDistance;
-                    pointAlongVisionLine += Vector3.up * UnityEngine.Random.Range(-ranDistance/2, ranDistance/2);
-                    pointAlongVisionLine += Vector3.right * UnityEngine.Random.Range(-ranDistance/2, ranDistance/2);
-                    pointAlongVisionLine += Vector3.forward * UnityEngine.Random.Range(-ranDistance/2, ranDistance/2);
-                    GameObject newMeteor = Instantiate(prefab, pointAlongVisionLine, Quaternion.identity);
+                    GameObject newMeteor = Instantiate(prefab, oneOfManyPosition, Quaternion.identity);
                     // fly in a random direction
                     newMeteor.GetComponent<asteroid_movement>().setDirection(x, y, z);
                 }
