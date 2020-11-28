@@ -690,6 +690,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7520804609812692110, guid: dca4840fda266ee468a1da6542b2529f, type: 3}
+--- !u!1 &699599837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699599839}
+  - component: {fileID: 699599838}
+  m_Layer: 0
+  m_Name: ContinuousSpectrum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &699599838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699599837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fabb92d2b52304da11f873d6772e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WasapiAudioSource: {fileID: 2121691320}
+  Profile: {fileID: 11400000, guid: d760c90ca551fb448b9be5760e18fbd2, type: 2}
+  Strategy: 0
+  Smoothed: 0
+--- !u!4 &699599839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699599837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95.72856, y: -2.5562828, z: -20.214247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1004572640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1004572642}
+  - component: {fileID: 1004572641}
+  m_Layer: 0
+  m_Name: asteroids
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1004572641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004572640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d132f231ac6a35438ce52281132b8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids:
+  - {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+  - {fileID: 180238, guid: c49caf18677eba3478784cd2f08b98b8, type: 3}
+  - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 3}
+  - {fileID: 173668, guid: 965a95650c5ae2a48b35aa03ca4a0a31, type: 3}
+  - {fileID: 103884, guid: 7f7566e20b9ffe54798c1bf42201e1a9, type: 3}
+  - {fileID: 180238, guid: eeb1c2ea47bc7f04cb234f63e9bbf4dc, type: 3}
+  - {fileID: 190680, guid: ead4c151b2850004782f62d3ac573cbe, type: 3}
+  - {fileID: 173668, guid: ae4427e80dceffe47b5179ce000667cb, type: 3}
+  player: {fileID: 1563654325}
+  numAsteroids: 1
+--- !u!4 &1004572642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004572640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95.72856, y: -2.5562828, z: -20.214247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123060857
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galaxy: {fileID: 147022, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
   numGalaxies: 6
+  galTorque: 40
 --- !u!1 &1177882730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1513,61 @@ MonoBehaviour:
   Prefab: {fileID: 1547811159}
   AudioScale: 40
   Power: 1
+--- !u!1 &1791919367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791919369}
+  - component: {fileID: 1791919368}
+  m_Layer: 0
+  m_Name: lasers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791919368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791919367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bf81ec208b41c489b108af9b235185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lasers:
+  - {fileID: 122648, guid: 11530f2b0a0cd2442949827ecbb622f2, type: 3}
+  - {fileID: 122648, guid: c5a1df10c8d59a0499ddc9980075afff, type: 3}
+  - {fileID: 122648, guid: ca2af0e667fbee643adf3612bc12eb19, type: 3}
+  - {fileID: 122648, guid: babc7508ec79a124c8e8f579f2153f45, type: 3}
+  - {fileID: 122648, guid: c5a5254b595442749b23f13d3d81df14, type: 3}
+  - {fileID: 122648, guid: 5de5fb81b8a9fb64998b5c074e94e159, type: 3}
+  - {fileID: 122648, guid: 364ac261574fb864bb6210d4a955d1e6, type: 3}
+  - {fileID: 122648, guid: 562c8ae9fbc1bce409df010599448c7b, type: 3}
+  - {fileID: 122648, guid: 2129225c46d2a18409b63b71136c374b, type: 3}
+  player: {fileID: 1563654325}
+  numLasers: 1
+--- !u!4 &1791919369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791919367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806967439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1801,7 @@ MonoBehaviour:
   - {fileID: 1926030371671396, guid: fef44d1e87525474182def3a1a40a148, type: 3}
   - {fileID: 1364588959314324, guid: f5cd7354c5e2cd546a7d90d6e9ce0daa, type: 3}
   - {fileID: 118266, guid: 527ddb38aa3c583479ae8906bc115e9e, type: 3}
-  numFlowers: 1600
+  numFlowers: 2000
   percentChange: 66
 --- !u!4 &1924534698
 Transform:
