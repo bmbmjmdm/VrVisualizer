@@ -20,20 +20,12 @@ namespace Assets.Scripts
             assessVerse();
             assessBeats();
         }
- 
-        // assessSong actively watches a single spectrum analyzor, SongChange, to see if the song has changed
-        // if so, change the scene
-        void assessSong() {
-            if (BeatCollector.songChange) {
-                // TODO
-            }
-        }
 
         // assessVerse actively watches a single spectrum analyzor, VerseChange, to see if the verse has changed
         // if so, toggle 3/5 effects
         void assessVerse() {
             if (BeatCollector.verseChange) {
-                BeatCollector.toggleEvents.Invoke(3);
+                BeatCollector.toggleEvents.Invoke();
                 BeatCollector.verseChange = false;
             }
         }

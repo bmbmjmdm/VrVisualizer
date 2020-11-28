@@ -13,7 +13,7 @@ public class SunReaction : MonoBehaviour
     private Vector3 beatVector = new Vector3(0.15f, 0.15f, 0.15f);
     private bool minusVector = false;
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private float clock = 0f;
     private float fadeOutClock = 0f;
     private Vector3[] originalScales = new Vector3[1];

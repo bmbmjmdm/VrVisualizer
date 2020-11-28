@@ -13,7 +13,7 @@ public class GalaxyReaction : MonoBehaviour
     private Vector3 onBeatVector = new Vector3(2f, 2f, 2f);
     private Vector3 offBeatVector = new Vector3(-0.016f, -0.016f, -0.016f);
     private int numBeat = 0;
-    private bool active = true;
+    public bool active = true;
     private float fadeOutClock = 0f;
     float speed = 30f;
     private Vector3[] originalScales = new Vector3[1];

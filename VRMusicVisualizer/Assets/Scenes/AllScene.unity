@@ -170,6 +170,7 @@ MonoBehaviour:
   - {fileID: 1946409831965702, guid: 27c09fea11be34b148f96c4e2b673aa3, type: 3}
   - {fileID: 1506902717015244, guid: 260289419ad374fd49c4be36e2c1165e, type: 3}
   numFireworks: 5
+  active: 0
 --- !u!1 &313291211
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   - {fileID: 1294500603521610, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
   numCrystals: 600
   percentChange: 50
+  active: 0
 --- !u!4 &404187619
 Transform:
   m_ObjectHideFlags: 0
@@ -476,6 +478,7 @@ MonoBehaviour:
   - {fileID: 144004, guid: 765d85c64e1e9854a94ccb1eaa1f56db, type: 3}
   numPlanets: 300
   percentChange: 66
+  active: 0
 --- !u!4 &476615096
 Transform:
   m_ObjectHideFlags: 0
@@ -529,6 +532,7 @@ MonoBehaviour:
   percentChange: 10
   treeForce: 6
   treeTorque: 5
+  active: 0
 --- !u!4 &580573932
 Transform:
   m_ObjectHideFlags: 0
@@ -582,6 +586,7 @@ MonoBehaviour:
   percentChange: 25
   treeForce: 2
   treeTorque: 0
+  active: 0
 --- !u!4 &589908959
 Transform:
   m_ObjectHideFlags: 0
@@ -777,6 +782,7 @@ MonoBehaviour:
   - {fileID: 173668, guid: ae4427e80dceffe47b5179ce000667cb, type: 3}
   player: {fileID: 1563654325}
   numAsteroids: 1
+  active: 0
 --- !u!4 &1004572642
 Transform:
   m_ObjectHideFlags: 0
@@ -836,6 +842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galaxy: {fileID: 147022, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
   numGalaxies: 6
+  active: 0
   galTorque: 40
 --- !u!1 &1177882730
 GameObject:
@@ -976,6 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 136928, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
   numSuns: 6
+  active: 0
 --- !u!4 &1283476623
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,6 +1083,7 @@ MonoBehaviour:
   Profile: {fileID: 11400000, guid: d760c90ca551fb448b9be5760e18fbd2, type: 2}
   Strategy: 0
   Smoothed: 0
+  checkVerse: 1
 --- !u!4 &1432794861
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,6 +1150,7 @@ MonoBehaviour:
   - {fileID: 176012, guid: 6eb52968ab2779d4db7990fe0f754609, type: 3}
   numNebuli: 150
   percentChange: 70
+  active: 0
 --- !u!1 &1503359713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1458,7 @@ MonoBehaviour:
   player: {fileID: 1563654325}
   featherEffect: {fileID: 100000, guid: caf9ed1b35da9be4ca771c1c07c070cf, type: 3}
   numBirds: 2
+  active: 0
 --- !u!4 &1720138980
 Transform:
   m_ObjectHideFlags: 0
@@ -1554,6 +1565,7 @@ MonoBehaviour:
   - {fileID: 122648, guid: 2129225c46d2a18409b63b71136c374b, type: 3}
   player: {fileID: 1563654325}
   numLasers: 1
+  active: 0
 --- !u!4 &1791919369
 Transform:
   m_ObjectHideFlags: 0
@@ -1737,6 +1749,7 @@ MonoBehaviour:
   percentChange: 50
   bunForce: 4
   bunTorque: 15
+  active: 0
 --- !u!1 &1924534696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1816,7 @@ MonoBehaviour:
   - {fileID: 118266, guid: 527ddb38aa3c583479ae8906bc115e9e, type: 3}
   numFlowers: 2000
   percentChange: 66
+  active: 0
 --- !u!4 &1924534698
 Transform:
   m_ObjectHideFlags: 0

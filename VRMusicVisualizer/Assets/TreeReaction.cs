@@ -14,7 +14,7 @@ public class TreeReaction : MonoBehaviour
     public int treeTorque = 90;
     private GameObject[] realObjs;
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private int sizeRange;
     private int changeSetLeftBound;
     private int changeSetRightBound;

@@ -8,8 +8,6 @@ namespace Assets.Scripts
 {
     public class ContinuousSpectrum : AudioVisualizationEffect
     {
-    private float clock = 0f;
-    private float clock2 = 0f;
 
         public void Start()
         {
@@ -20,6 +18,7 @@ namespace Assets.Scripts
             // TODO we might want to normalize this list for 2 reasons:
             // 1. high spectrums tend to be lower amplitude than low spectrum
             // 2. high spectrum has higher # to divide by, which can make them seem even smaller 
+            // Counter argument: we're using percents to describe these buckets, so as long as they're consistently smaller/larger/etc, it shouldnt matter
             var spectrum = GetSpectrumData().ToList();
             // low frequency zone
             float lowAv = 0;
@@ -50,22 +49,6 @@ namespace Assets.Scripts
             BeatCollector.setMidAv(midAv);
             BeatCollector.setHighAv(highAv);
             BeatCollector.setAllAv(allAv);
-
-            // every 15 seconds, make our average significance functions reset their dividor so that we never get too set in our ways of measuring static (aka will adapt to changing volume/songs)
-            clock += Time.deltaTime;
-            if (clock > 15f) {
-                BeatCollector.resetAverageDifferences();
-                clock = 0.0f;
-            }
-
-            // TODO replace this timer with the verse/song detection algorithm
-            // resets max averages so we dont get too stale (adapt to song/volume change)
-            clock2 += Time.deltaTime;
-            if (clock2 > 30f) {
-                BeatCollector.resetAverageMaxes();
-                clock2 = 0.0f;
-            }
-
         }
 
     }

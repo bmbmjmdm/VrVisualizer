@@ -14,7 +14,7 @@ public class PlanetReaction : MonoBehaviour
     private Vector3 onBeatVector = new Vector3(2f, 2f, 2f);
     private Vector3 offBeatVector = new Vector3(-0.016f, -0.016f, -0.016f);
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private int sizeRange;
     private int changeSetLeftBound;
     private int changeSetRightBound;

@@ -12,7 +12,7 @@ public class LaserReaction : MonoBehaviour
     public GameObject player;
     public int numLasers;
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
 
     // Start is called before the first frame update
     void Start()

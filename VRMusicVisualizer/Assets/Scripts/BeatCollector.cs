@@ -46,7 +46,6 @@ namespace Assets.Scripts
         public static bool bigBeatTreb = false;
         public static bool bigBeatTotal = false;
         public static bool spikeBeat = false;
-        public static bool songChange = false;
         public static bool verseChange = false;
 
         // This adds the listener to a "random" frequency bucket, keeping all buckets as even as possible
@@ -160,10 +159,15 @@ namespace Assets.Scripts
         // this makes sure we can adapt to changing songs/volumes
         // we only reduce by 1.33 since we currently do this every X seconds, which isn't smart enough to make big changes (can divide by 2 if we can detect song/volum change)
         public static void resetAverageMaxes () {
-            allMax = allMax/1.33f;
-            lowMax = lowMax/1.33f;
-            midMax = midMax/1.33f;
-            highMax = highMax/1.33f;
+            allMax = allMax/2f;
+            lowMax = lowMax/2f;
+            midMax = midMax/2f;
+            highMax = highMax/2f;
+        }
+
+        public static void songChange() {
+            resetAverageDifferences();
+            resetAverageMaxes();
         }
 
         // for effects that ebb in real time with the spectrum, we supply the current spectrum average as a percent of the max it can be

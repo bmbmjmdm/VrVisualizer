@@ -14,7 +14,7 @@ public class FlowerReaction : MonoBehaviour
     private Vector3 beatVectorGrow = new Vector3(0.03f, 0.03f, 0.03f);
     private Vector3 beatVectorNew = new Vector3(0f, 0f, 0f);
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private int sizeRange;
     private int changeSetLeftBound;
     private int changeSetRightBound;

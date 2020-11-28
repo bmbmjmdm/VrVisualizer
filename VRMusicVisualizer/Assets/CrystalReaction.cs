@@ -12,7 +12,7 @@ public class CrystalReaction : MonoBehaviour
     public float percentChange;
     private GameObject[] realObjs;
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private int sizeRange;
     private int changeSetLeftBound;
     private int changeSetRightBound;

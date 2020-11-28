@@ -15,7 +15,7 @@ public class BunnyReaction : MonoBehaviour
     private GameObject[] realObjs;
     private Animator[] realObjsAnimators;
     private bool hasBeat = false;
-    private bool active = true;
+    public bool active = true;
     private int sizeRange;
     private int changeSetLeftBound;
     private int changeSetRightBound;
@@ -26,6 +26,7 @@ public class BunnyReaction : MonoBehaviour
     private int IDLE = 0;
     private Vector3[] originalScales = new Vector3[1];
     private bool destroyed = false;
+    private float clock = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -92,7 +93,7 @@ public class BunnyReaction : MonoBehaviour
                 changeSetLeftBound = rand;
                 changeSetRightBound = rand + sizeRange;
             }
-            if (hasBeat) {
+            if (hasBeat && clock >= 0.65f) {
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
                     // 50/50 shot
                     int rand = UnityEngine.Random.Range(0, 2);
@@ -103,6 +104,8 @@ public class BunnyReaction : MonoBehaviour
                         rigBod.AddTorque(Vector3.up * bunTorque * negate, ForceMode.VelocityChange);
                     }
                     else {
+                        // wait for jump to finish afterwards
+                        clock = 0f;
                         realObjsAnimators[i].SetInteger("AnimIndex", HOP);
                         realObjsAnimators[i].SetTrigger("Next");
                         // jump "forward" based on its rotation
@@ -110,6 +113,13 @@ public class BunnyReaction : MonoBehaviour
                     }
                 }
                 hasBeat = false;
+            }
+            else {
+                // we missed the beat cause we were already jumping
+                if (hasBeat) {
+                    hasBeat = false;
+                }
+                clock += Time.deltaTime;
             }
         }
     }
