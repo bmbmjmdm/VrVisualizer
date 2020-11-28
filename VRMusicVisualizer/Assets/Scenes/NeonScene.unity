@@ -161,6 +161,7 @@ MonoBehaviour:
   - {fileID: 122648, guid: 562c8ae9fbc1bce409df010599448c7b, type: 3}
   player: {fileID: 1772200496}
   numLasers: 1
+  active: 1
 --- !u!4 &122792456
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +226,7 @@ MonoBehaviour:
   - {fileID: 1946409831965702, guid: 27c09fea11be34b148f96c4e2b673aa3, type: 3}
   - {fileID: 1506902717015244, guid: 260289419ad374fd49c4be36e2c1165e, type: 3}
   numFireworks: 5
+  active: 1
 --- !u!1 &313291211
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +421,54 @@ MonoBehaviour:
   kernelSize: 5
   lightAngle: 1
   maxDepthBias: 0.001
+--- !u!1 &314390529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314390531}
+  - component: {fileID: 314390530}
+  m_Layer: 0
+  m_Name: SongChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &314390530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314390529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fe9f54399c98240b3f0021e4b3c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WasapiAudioSource: {fileID: 2121691320}
+  Profile: {fileID: 11400000, guid: d760c90ca551fb448b9be5760e18fbd2, type: 2}
+  Strategy: 0
+  Smoothed: 0
+  checkVerse: 0
+--- !u!4 &314390531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314390529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404187617
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +511,7 @@ MonoBehaviour:
   - {fileID: 1294500603521610, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
   numCrystals: 600
   percentChange: 50
+  active: 1
 --- !u!4 &404187619
 Transform:
   m_ObjectHideFlags: 0

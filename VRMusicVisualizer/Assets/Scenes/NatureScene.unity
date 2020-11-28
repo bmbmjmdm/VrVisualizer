@@ -353,6 +353,7 @@ MonoBehaviour:
   percentChange: 10
   treeForce: 6
   treeTorque: 5
+  active: 1
 --- !u!4 &580573932
 Transform:
   m_ObjectHideFlags: 0
@@ -406,6 +407,7 @@ MonoBehaviour:
   percentChange: 25
   treeForce: 2
   treeTorque: 0
+  active: 1
 --- !u!4 &589908959
 Transform:
   m_ObjectHideFlags: 0
@@ -514,6 +516,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7520804609812692110, guid: dca4840fda266ee468a1da6542b2529f, type: 3}
+--- !u!1 &768009706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 768009708}
+  - component: {fileID: 768009707}
+  m_Layer: 0
+  m_Name: SongChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &768009707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768009706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fe9f54399c98240b3f0021e4b3c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WasapiAudioSource: {fileID: 2121691320}
+  Profile: {fileID: 11400000, guid: d760c90ca551fb448b9be5760e18fbd2, type: 2}
+  Strategy: 0
+  Smoothed: 0
+  checkVerse: 0
+--- !u!4 &768009708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768009706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177882730
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1031,7 @@ MonoBehaviour:
   player: {fileID: 1563654325}
   featherEffect: {fileID: 100000, guid: caf9ed1b35da9be4ca771c1c07c070cf, type: 3}
   numBirds: 2
+  active: 1
 --- !u!4 &1720138980
 Transform:
   m_ObjectHideFlags: 0
@@ -1215,6 +1266,7 @@ MonoBehaviour:
   percentChange: 50
   bunForce: 4
   bunTorque: 15
+  active: 1
 --- !u!1 &1924534696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1333,7 @@ MonoBehaviour:
   - {fileID: 118266, guid: 527ddb38aa3c583479ae8906bc115e9e, type: 3}
   numFlowers: 2000
   percentChange: 66
+  active: 1
 --- !u!4 &1924534698
 Transform:
   m_ObjectHideFlags: 0

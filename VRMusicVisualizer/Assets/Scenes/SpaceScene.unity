@@ -370,6 +370,7 @@ MonoBehaviour:
   - {fileID: 144004, guid: 765d85c64e1e9854a94ccb1eaa1f56db, type: 3}
   numPlanets: 400
   percentChange: 66
+  active: 1
 --- !u!4 &476615096
 Transform:
   m_ObjectHideFlags: 0
@@ -518,6 +519,7 @@ MonoBehaviour:
   - {fileID: 173668, guid: ae4427e80dceffe47b5179ce000667cb, type: 3}
   player: {fileID: 1593049119}
   numAsteroids: 1
+  active: 1
 --- !u!4 &1098599572
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galaxy: {fileID: 147022, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
   numGalaxies: 6
+  active: 1
   galTorque: 40
 --- !u!1 &1177882730
 GameObject:
@@ -717,6 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 136928, guid: 01538f1c3c3e04848889987a7bca8e63, type: 3}
   numSuns: 6
+  active: 1
 --- !u!4 &1283476623
 Transform:
   m_ObjectHideFlags: 0
@@ -835,6 +839,7 @@ MonoBehaviour:
   - {fileID: 6050836191213314978, guid: bfd2391851b38be4c835e54f82e4132c, type: 3}
   numNebuli: 100
   percentChange: 70
+  active: 1
 --- !u!1 &1503359713
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +983,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1789329211}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1557541912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557541914}
+  - component: {fileID: 1557541913}
+  m_Layer: 0
+  m_Name: SongChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1557541913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557541912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fe9f54399c98240b3f0021e4b3c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WasapiAudioSource: {fileID: 2121691320}
+  Profile: {fileID: 11400000, guid: d760c90ca551fb448b9be5760e18fbd2, type: 2}
+  Strategy: 0
+  Smoothed: 0
+  checkVerse: 0
+--- !u!4 &1557541914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557541912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577184021
 GameObject:
