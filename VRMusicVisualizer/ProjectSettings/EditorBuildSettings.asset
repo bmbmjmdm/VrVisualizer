@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/AllScene.unity
+    guid: fd687eb0b4b09f143b6de792514cafa0
+  - enabled: 1
+    path: Assets/Scenes/SpaceScene.unity
+    guid: 1c0b27348c02fa14e9ff7072a4e6f5fa
+  - enabled: 1
+    path: Assets/Scenes/NatureScene.unity
+    guid: 9dc0c152b51001e4dbf4d5ee661eee20
+  - enabled: 1
+    path: Assets/Scenes/NeonScene.unity
+    guid: 7cad14b811a078944b6b53be74fad20a
   m_configObjects: {}
