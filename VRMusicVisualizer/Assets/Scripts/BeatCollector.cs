@@ -74,6 +74,10 @@ namespace Assets.Scripts
             toggleEvents.AddListener(fun);
         }
 
+        public static void resetEvents () {
+            toggleEvents.reset();
+        }
+
         private static float lowSum = 0f;
         private static int lowNum = 0;
 

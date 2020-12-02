@@ -27,7 +27,11 @@ public class CrystalReaction : MonoBehaviour
     {
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
-        CreateObjs(false);
+        if (active) CreateObjs(false);
+        else {
+            realObjs = new GameObject[numCrystals];
+            destroyed = true;
+        }
     }
 
     void CreateObjs(Boolean small) {

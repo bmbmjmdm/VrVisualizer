@@ -9,7 +9,7 @@ namespace Assets.Scripts
 public class AsteroidReaction : MonoBehaviour
 {
     public GameObject[] asteroids;
-    public GameObject player;
+    private GameObject player;
     public int numAsteroids;
     private bool hasBeat = false;
     public bool active = true;
@@ -17,6 +17,7 @@ public class AsteroidReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
     }

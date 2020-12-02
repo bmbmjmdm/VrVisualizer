@@ -16,21 +16,22 @@ namespace Assets.Scripts
         private float clock = 0f;
         private float clock2 = 0f;
         public bool checkVerse = false;
-        private bool init = true;
 
         public void Start()
         {
+            // this turns on 1 effect at the start of the program
+            if (checkVerse) {
+                BeatCollector.verseChange = true;
+            }
+            // Hacky, but this works because we only have 1 scene that uses events
+            // This makes it so when the user leaves the event-relying (which is checkVerse relying), it'll clear the old event listeners
+            else {
+                BeatCollector.resetEvents();
+            }
         }
 
         public void Update()
         {
-            // this turns on 1 effect at the start of the program
-            if (checkVerse && init && clock2 > 2.0f) {
-                Debug.Log("VERSE CHANGE3");
-                BeatCollector.verseChange = true;
-                init = false;
-            }
-
             var spectrum = GetSpectrumData().ToList();
 
             bool verseChange = false;
@@ -43,13 +44,11 @@ namespace Assets.Scripts
 
             // don't let song change more than once every 30 seconds
             if (songChange && clock > 30f) {
-                Debug.Log("song change");
                 clock = 0f;
                 BeatCollector.songChange();
                 if (checkVerse) {
                     // for animation reasons, dont let verse change if it changed too recently
                     if (clock2 > 5f) {
-                        Debug.Log("VERSE CHANGE2");
                         BeatCollector.verseChange = true;
                         clock2 = 0f;
                     }
@@ -59,7 +58,6 @@ namespace Assets.Scripts
                 }
             }
             else if (verseChange) {
-                Debug.Log("VERSE CHANGE1");
                 clock2 = 0f;
                 BeatCollector.verseChange = true;
             }

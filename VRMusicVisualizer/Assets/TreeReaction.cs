@@ -29,7 +29,11 @@ public class TreeReaction : MonoBehaviour
     {
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
-        CreateObjs(false);
+        if (active) CreateObjs(false);
+        else {
+            realObjs = new GameObject[numTrees];
+            destroyed = true;
+        }
     }
 
     void CreateObjs(Boolean small) {

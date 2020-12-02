@@ -9,6 +9,11 @@ namespace Assets.Scripts{
         private ArrayList arrayList = new ArrayList();
         private int curActive = -1;
 
+        public void reset () {
+            arrayList = new ArrayList();
+            curActive = -1;
+        }
+
         public void AddListener(UnityAction fun) {
             arrayList.Add(fun);
         }

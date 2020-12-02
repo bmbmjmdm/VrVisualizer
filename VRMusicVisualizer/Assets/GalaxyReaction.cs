@@ -25,7 +25,11 @@ public class GalaxyReaction : MonoBehaviour
     {
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
-        CreateObjs(false);
+        if (active) CreateObjs(false);
+        else {
+            realObjs = new GameObject[numGalaxies];
+            destroyed = true;
+        }
     }
 
     void CreateObjs(Boolean small) {

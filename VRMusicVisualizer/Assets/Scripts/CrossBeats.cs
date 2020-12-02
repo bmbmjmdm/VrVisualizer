@@ -22,7 +22,7 @@ namespace Assets.Scripts
         }
 
         // assessVerse actively watches a single spectrum analyzor, VerseChange, to see if the verse has changed
-        // if so, toggle 3/5 effects
+        // if so, toggle current effect off and a random effect on
         void assessVerse() {
             if (BeatCollector.verseChange) {
                 BeatCollector.toggleEvents.Invoke();

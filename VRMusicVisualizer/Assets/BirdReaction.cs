@@ -9,7 +9,7 @@ namespace Assets.Scripts
 public class BirdReaction : MonoBehaviour
 {
     public GameObject[] birds;
-    public GameObject player;
+    private GameObject player;
     public GameObject featherEffect;
     public int numBirds;
     private bool hasBeat = false;
@@ -18,6 +18,7 @@ public class BirdReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
     }

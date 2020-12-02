@@ -9,7 +9,7 @@ namespace Assets.Scripts
 public class LaserReaction : MonoBehaviour
 {
     public GameObject[] lasers;
-    public GameObject player;
+    private GameObject player;
     public int numLasers;
     private bool hasBeat = false;
     public bool active = true;
@@ -17,6 +17,7 @@ public class LaserReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
     }
