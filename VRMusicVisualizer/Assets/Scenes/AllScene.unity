@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 726481314}
   - component: {fileID: 726481313}
   m_Layer: 0
-  m_Name: ChangeScene
+  m_Name: UserInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,11 +768,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 726481312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370be90724ce61e4282aa00148c25888, type: 3}
+  m_Script: {fileID: 11500000, guid: aa8ea041655cb5d4fa63b3fd8ada079d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChangeScene:
     actionPath: /actions/default/in/NextScene
+    needsReinit: 0
+  MakeBeat:
+    actionPath: /actions/default/in/MakeBeat
     needsReinit: 0
   handLeft: 1
   handRight: 2
@@ -830,7 +833,6 @@ MonoBehaviour:
   - {fileID: 180238, guid: eeb1c2ea47bc7f04cb234f63e9bbf4dc, type: 3}
   - {fileID: 190680, guid: ead4c151b2850004782f62d3ac573cbe, type: 3}
   - {fileID: 173668, guid: ae4427e80dceffe47b5179ce000667cb, type: 3}
-  player: {fileID: 0}
   numAsteroids: 1
   active: 0
 --- !u!4 &1004572642
@@ -1434,7 +1436,6 @@ MonoBehaviour:
   - {fileID: 100092, guid: 7d394b5ffd1a15943aae17fcdd87bea9, type: 3}
   - {fileID: 100092, guid: 5a7612e645ba26a43a6483249999e907, type: 3}
   - {fileID: 100092, guid: 040770b1b5d24ef48be3b2b48353c1ff, type: 3}
-  player: {fileID: 0}
   featherEffect: {fileID: 100000, guid: caf9ed1b35da9be4ca771c1c07c070cf, type: 3}
   numBirds: 2
   active: 0
@@ -1542,7 +1543,6 @@ MonoBehaviour:
   - {fileID: 122648, guid: 364ac261574fb864bb6210d4a955d1e6, type: 3}
   - {fileID: 122648, guid: 562c8ae9fbc1bce409df010599448c7b, type: 3}
   - {fileID: 122648, guid: 2129225c46d2a18409b63b71136c374b, type: 3}
-  player: {fileID: 0}
   numLasers: 1
   active: 0
 --- !u!4 &1791919369

@@ -564,56 +564,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1149262114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1149262116}
-  - component: {fileID: 1149262115}
-  m_Layer: 0
-  m_Name: ChangeScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1149262115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149262114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370be90724ce61e4282aa00148c25888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeScene:
-    actionPath: /actions/default/in/NextScene
-    needsReinit: 0
-  handLeft: 1
-  handRight: 2
-  nextScene: NeonScene
-  prevScene: SpaceScene
---- !u!4 &1149262116
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149262114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177882730
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +868,59 @@ Transform:
   m_Father: {fileID: 1789329211}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1566097647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566097649}
+  - component: {fileID: 1566097648}
+  m_Layer: 0
+  m_Name: UserInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1566097648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566097647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8ea041655cb5d4fa63b3fd8ada079d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeScene:
+    actionPath: /actions/default/in/NextScene
+    needsReinit: 0
+  MakeBeat:
+    actionPath: /actions/default/in/MakeBeat
+    needsReinit: 0
+  handLeft: 1
+  handRight: 2
+  nextScene: NeonScene
+  prevScene: SpaceScene
+--- !u!4 &1566097649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566097647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594198193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1010,6 @@ MonoBehaviour:
   - {fileID: 100092, guid: 7d394b5ffd1a15943aae17fcdd87bea9, type: 3}
   - {fileID: 100092, guid: 5a7612e645ba26a43a6483249999e907, type: 3}
   - {fileID: 100092, guid: 040770b1b5d24ef48be3b2b48353c1ff, type: 3}
-  player: {fileID: 0}
   featherEffect: {fileID: 100000, guid: caf9ed1b35da9be4ca771c1c07c070cf, type: 3}
   numBirds: 2
   active: 1

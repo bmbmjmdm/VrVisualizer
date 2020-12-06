@@ -112,5 +112,13 @@ namespace Valve.VR
                 return SteamVR_Actions.default_NextScene;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean MakeBeat
+        {
+            get
+            {
+                return SteamVR_Actions.default_MakeBeat;
+            }
+        }
     }
 }

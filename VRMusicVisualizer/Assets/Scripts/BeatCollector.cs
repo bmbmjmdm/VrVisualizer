@@ -78,11 +78,51 @@ namespace Assets.Scripts
             toggleEvents.reset();
         }
 
+        private static int skipLowAv = 0;
+        private static int skipMidAv = 0;
+        private static int skipHighAv = 0;
+        private static int skipAllAv = 0;
+
+        public static void maxOutBeat () {
+            rainBeatBass = true;
+            rainBeatMid = true;
+            rainBeatTreb = true;
+            rainBeatTotal = true;
+            audioBeat = true;
+            detektorBeat = true;
+            bigBeatBass = true;
+            bigBeatMid = true;
+            bigBeatTreb = true;
+            bigBeatTotal = true;
+            spikeBeat = true;
+            lowAv = lowMax;
+            midAv = midMax;
+            highAv = highMax;
+            allAv = allMax;
+            pastLow = 0;
+            pastMid = 0;
+            pastHigh = 0;
+            pastAll = 0;
+            skipLowAv = 10;
+            skipMidAv = 10;
+            skipHighAv = 10;
+            skipAllAv = 10;
+            lowSig = true;
+            midSig = true;
+            highSig = true;
+            allSig = true;
+        }
+
         private static float lowSum = 0f;
         private static int lowNum = 0;
 
         // low/mid/high/all frequency ranges follow the same formula for setting their current average frequency:
         public static void setLowAv (float i) {
+            // if we just made a manual beat, dont record actual audio average for a few frames
+            if (skipLowAv > 0) {
+                skipLowAv --;
+                return;
+            }
             // first, store the previous average freqency amplitude as a percent of 0.0 to 1.0
             float tempPastLow = getLowPer();
             // set our current raw average
@@ -105,6 +145,10 @@ namespace Assets.Scripts
         private static int midNum = 0;
 
         public static void setMidAv (float i) {
+            if (skipMidAv > 0) {
+                skipMidAv --;
+                return;
+            }
             float tempPastMid = getMidPer();
             midAv = i;
             if (midAv > midMax) {
@@ -120,6 +164,10 @@ namespace Assets.Scripts
         private static int highNum = 0;
 
         public static void setHighAv (float i) {
+            if (skipHighAv > 0) {
+                skipHighAv --;
+                return;
+            }
             float tempPastHigh = getHighPer();
             highAv = i;
             if (highAv > highMax) {
@@ -135,6 +183,10 @@ namespace Assets.Scripts
         private static int allNum = 0;
 
         public static void setAllAv (float i) {
+            if (skipAllAv > 0) {
+                skipAllAv --;
+                return;
+            }
             float tempPastAll = getAllPer();
             allAv = i;
             if (allAv > allMax) {

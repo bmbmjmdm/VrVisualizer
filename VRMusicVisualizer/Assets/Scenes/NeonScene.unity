@@ -159,7 +159,6 @@ MonoBehaviour:
   - {fileID: 122648, guid: 364ac261574fb864bb6210d4a955d1e6, type: 3}
   - {fileID: 122648, guid: 2129225c46d2a18409b63b71136c374b, type: 3}
   - {fileID: 122648, guid: 562c8ae9fbc1bce409df010599448c7b, type: 3}
-  player: {fileID: 0}
   numLasers: 1
   active: 1
 --- !u!4 &122792456
@@ -227,56 +226,6 @@ MonoBehaviour:
   - {fileID: 1506902717015244, guid: 260289419ad374fd49c4be36e2c1165e, type: 3}
   numFireworks: 5
   active: 1
---- !u!1 &233525850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 233525852}
-  - component: {fileID: 233525851}
-  m_Layer: 0
-  m_Name: ChangeScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &233525851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233525850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370be90724ce61e4282aa00148c25888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeScene:
-    actionPath: /actions/default/in/NextScene
-    needsReinit: 0
-  handLeft: 1
-  handRight: 2
-  nextScene: AllScene
-  prevScene: NatureScene
---- !u!4 &233525852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233525850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313291211
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +727,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   markerActive: 1
+--- !u!1 &1266492428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266492430}
+  - component: {fileID: 1266492429}
+  m_Layer: 0
+  m_Name: UserInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1266492429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266492428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8ea041655cb5d4fa63b3fd8ada079d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeScene:
+    actionPath: /actions/default/in/NextScene
+    needsReinit: 0
+  MakeBeat:
+    actionPath: /actions/default/in/MakeBeat
+    needsReinit: 0
+  handLeft: 1
+  handRight: 2
+  nextScene: AllScene
+  prevScene: NatureScene
+--- !u!4 &1266492430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266492428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345692055
 GameObject:
   m_ObjectHideFlags: 0

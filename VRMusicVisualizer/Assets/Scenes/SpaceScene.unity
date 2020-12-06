@@ -385,56 +385,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &632170945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 632170947}
-  - component: {fileID: 632170946}
-  m_Layer: 0
-  m_Name: ChangeScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &632170946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632170945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370be90724ce61e4282aa00148c25888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangeScene:
-    actionPath: /actions/default/in/NextScene
-    needsReinit: 0
-  handLeft: 1
-  handRight: 2
-  nextScene: NatureScene
-  prevScene: AllScene
---- !u!4 &632170947
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632170945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635997065
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +517,6 @@ MonoBehaviour:
   - {fileID: 180238, guid: eeb1c2ea47bc7f04cb234f63e9bbf4dc, type: 3}
   - {fileID: 190680, guid: ead4c151b2850004782f62d3ac573cbe, type: 3}
   - {fileID: 173668, guid: ae4427e80dceffe47b5179ce000667cb, type: 3}
-  player: {fileID: 0}
   numAsteroids: 1
   active: 1
 --- !u!4 &1098599572
@@ -836,6 +785,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1395486315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395486317}
+  - component: {fileID: 1395486316}
+  m_Layer: 0
+  m_Name: UserInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395486316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395486315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8ea041655cb5d4fa63b3fd8ada079d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChangeScene:
+    actionPath: /actions/default/in/NextScene
+    needsReinit: 0
+  MakeBeat:
+    actionPath: /actions/default/in/MakeBeat
+    needsReinit: 0
+  handLeft: 1
+  handRight: 2
+  nextScene: NatureScene
+  prevScene: AllScene
+--- !u!4 &1395486317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395486315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -534.1975, y: 364.0714, z: -184.02502}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477496319
 GameObject:

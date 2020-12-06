@@ -52,7 +52,12 @@
     {
       "name": "/actions/default/in/NextScene",
       "type": "boolean",
-      "requirement": "suggested"
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/default/in/MakeBeat",
+      "type": "boolean",
+      "requirement": "mandatory"
     },
     {
       "name": "/actions/platformer/in/Move",

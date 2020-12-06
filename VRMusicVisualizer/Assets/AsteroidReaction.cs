@@ -33,16 +33,16 @@ public class AsteroidReaction : MonoBehaviour
             Vector3 fwd = playerDirection * Vector3.forward;
             for (int i = 0; i < numAsteroids; i++) {
                 // select the direction the asteroid's flying in so we can make each group fly together
-                int x = 0;
-                int y = 0;
-                int z = 0;
+                float x = 0;
+                float y = 0;
+                float z = 0;
                 while (x == 0 && z == 0 && y == 0) {
-                    x = UnityEngine.Random.Range(-1, 2);
-                    z = UnityEngine.Random.Range(-1, 2);
-                    y = UnityEngine.Random.Range(-1, 2);
+                    x = UnityEngine.Random.Range(-1.0f, 2.0f);
+                    z = UnityEngine.Random.Range(-1.0f, 2.0f);
+                    y = UnityEngine.Random.Range(-1.0f, 2.0f);
                 }
                 // select the relative location of the group so they spawn together
-                float ranDistance = UnityEngine.Random.Range(1.0f, 40.0f);
+                float ranDistance = UnityEngine.Random.Range(30.0f, 60.0f);
                 // This places a random point directly in front of the user, up to 20 units away
                 // It then finds another point within (+-40,+-40,+-40)/1.25 of that first point 
                 Vector3 pointAlongVisionLine = player.transform.position + fwd * ranDistance;
@@ -61,7 +61,8 @@ public class AsteroidReaction : MonoBehaviour
                     GameObject prefab = asteroids[ranObj];
                     GameObject newMeteor = Instantiate(prefab, oneOfManyPosition, Quaternion.identity);
                     // fly in a random direction
-                    newMeteor.GetComponent<asteroid_movement>().setDirection(x, y, z);
+                    asteroid_movement movement = newMeteor.GetComponent<asteroid_movement>();
+                    movement.setDirection(x, y, z);
                 }
             }
             hasBeat = false;

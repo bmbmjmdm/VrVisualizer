@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts {
 
-    public class SceneChange : MonoBehaviour 
+    public class UserInput : MonoBehaviour 
     {
         public SteamVR_Action_Boolean ChangeScene;
+        public SteamVR_Action_Boolean MakeBeat;
         public SteamVR_Input_Sources handLeft; 
         public SteamVR_Input_Sources handRight;
         public string nextScene;
@@ -19,19 +20,25 @@ namespace Assets.Scripts {
         void Start() {
             ChangeScene.AddOnStateDownListener(triggerPrevScene, handLeft);
             ChangeScene.AddOnStateDownListener(triggerNextScene, handRight);
+            MakeBeat.AddOnStateDownListener(triggerBeat, handRight);
+            MakeBeat.AddOnStateDownListener(triggerBeat, handLeft);
         }
         
         public void triggerPrevScene(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (changingScene) return;
             changingScene = true;
-            StartCoroutine(LoadYourAsyncScene(nextScene));
+            StartCoroutine(LoadYourAsyncScene(prevScene));
         }
         
         public void triggerNextScene(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (changingScene) return;
             changingScene = true;
             StartCoroutine(LoadYourAsyncScene(nextScene));
-        }        
+        }   
+        
+        public void triggerBeat(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
+            BeatCollector.maxOutBeat();
+        }     
 
         IEnumerator LoadYourAsyncScene(string sceneName)
         {
