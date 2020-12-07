@@ -91,11 +91,11 @@ public class SunReaction : MonoBehaviour
             */
             // reduce jitters by changing scale at constant interval
             // dont change a sun's scale if it only changed by a tiny tiny bit. this gets rid of jitters 
-            if (clock >= 0.02 && BeatCollector.lowSig) {
+            if (clock >= 0.02 && BeatCollector.midSig) {
                 clock = 0f;
                 // set each sun's size relative to our current spectrum low-end average percentage
                 for (int i = 0; i < numSuns; i++) {
-                    float scale = 50.0f * BeatCollector.getLowPer();
+                    float scale = 50.0f * BeatCollector.getMidPer();
                     realObjs[i].transform.localScale = new Vector3(scale, scale, scale);
                 }
             }
