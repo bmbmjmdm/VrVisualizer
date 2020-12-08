@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NeonScene.unity
     guid: 7cad14b811a078944b6b53be74fad20a
+  - enabled: 1
+    path: Assets/Scenes/CustomScene.unity
+    guid: 8a79a6386ef25e845b524125b6338cce
   m_configObjects: {}

@@ -48,6 +48,8 @@ namespace Assets.Scripts
         public static bool spikeBeat = false;
         public static bool verseChange = false;
 
+
+
         // This adds the listener to a "random" frequency bucket, keeping all buckets as even as possible
         // whichever bucket (beatEventsLow, beatEventsMid, beatEventsHigh) has the lowest number of listeners, give this current listener to it and increment its bucket size 1
         public static void registerBeatListener (UnityAction fun) {
@@ -70,13 +72,70 @@ namespace Assets.Scripts
             }
         }
 
+        //=============================================================================== all scene logic
+
+
+
+
         public static void registerVerseListener (UnityAction fun) {
             toggleEvents.AddListener(fun);
         }
 
         public static void resetEvents () {
             toggleEvents.reset();
+            beatEventsLow.RemoveAllListeners();
+            beatEventsMid.RemoveAllListeners();
+            beatEventsHigh.RemoveAllListeners();
         }
+
+
+
+        //=============================================================================== user input add/remove effects in custom scene logic
+
+        public static bool needSave = false;
+
+        public static void cycleEffect (bool firstCall) {
+            toggleEvents.InvokeOrdered(firstCall);
+        }
+
+        public static void confirmEffect () {
+            toggleEvents.FinishInvokedOrdered();
+            needSave = true;
+        }
+
+        public static void abandonAddingEffect () {
+            toggleEvents.AbandonInvokedOrdered();
+        }
+
+        public static void cycleDeletingEffect (bool firstCall) {
+            toggleEvents.AntiInvokeOrdered(firstCall);
+        }
+
+        public static void confirmDeleteEffect () {
+            toggleEvents.FinishAntiInvokedOrdered();
+            needSave = true;
+        }
+        
+        public static void abandonDeletingEffect () {
+            toggleEvents.AbandonAntiInvokedOrdered();
+        }
+
+        public static ArrayList getSelectedEffectsForSave () {
+            return toggleEvents.getSelectedEffectsForSave();
+        }
+
+        public static void setSelectedEffectsFromLoad (ArrayList effects) {
+            toggleEvents.setSelectedEffectsFromLoad(effects);
+        }
+
+
+
+
+
+
+
+        //=============================================================================== user input cause beat logic
+
 
         private static int skipLowAv = 0;
         private static int skipMidAv = 0;
@@ -112,6 +171,11 @@ namespace Assets.Scripts
             highSig = true;
             allSig = true;
         }
+
+
+
+
+        //=============================================================================== continuous spectrum logic
 
         private static float lowSum = 0f;
         private static int lowNum = 0;

@@ -60,6 +60,22 @@
       "requirement": "mandatory"
     },
     {
+      "name": "/actions/default/in/CycleAddEffect",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/CycleDeleteEffect",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/ConfirmAddEffect",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/ConfirmDeleteEffect",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/platformer/in/Move",
       "type": "vector2"
     },

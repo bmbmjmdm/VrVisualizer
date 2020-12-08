@@ -762,6 +762,18 @@ MonoBehaviour:
   MakeBeat:
     actionPath: /actions/default/in/MakeBeat
     needsReinit: 0
+  CycleAddEffect:
+    actionPath: /actions/default/in/CycleAddEffect
+    needsReinit: 0
+  CycleDeleteEffect:
+    actionPath: /actions/default/in/CycleDeleteEffect
+    needsReinit: 0
+  ConfirmAddEffect:
+    actionPath: /actions/default/in/ConfirmAddEffect
+    needsReinit: 0
+  ConfirmDeleteEffect:
+    actionPath: /actions/default/in/ConfirmDeleteEffect
+    needsReinit: 0
   handLeft: 1
   handRight: 2
   nextScene: AllScene
@@ -1299,7 +1311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121691319}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ca4c4f9442e14db8c72acac5da136, type: 3}
   m_Name: 

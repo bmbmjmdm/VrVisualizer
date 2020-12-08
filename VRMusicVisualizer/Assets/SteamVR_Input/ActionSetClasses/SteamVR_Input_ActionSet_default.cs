@@ -120,5 +120,37 @@ namespace Valve.VR
                 return SteamVR_Actions.default_MakeBeat;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean CycleAddEffect
+        {
+            get
+            {
+                return SteamVR_Actions.default_CycleAddEffect;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean CycleDeleteEffect
+        {
+            get
+            {
+                return SteamVR_Actions.default_CycleDeleteEffect;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean ConfirmAddEffect
+        {
+            get
+            {
+                return SteamVR_Actions.default_ConfirmAddEffect;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean ConfirmDeleteEffect
+        {
+            get
+            {
+                return SteamVR_Actions.default_ConfirmDeleteEffect;
+            }
+        }
     }
 }

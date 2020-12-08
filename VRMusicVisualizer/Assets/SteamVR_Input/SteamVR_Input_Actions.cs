@@ -43,6 +43,14 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_default_MakeBeat;
         
+        private static SteamVR_Action_Boolean p_default_CycleAddEffect;
+        
+        private static SteamVR_Action_Boolean p_default_CycleDeleteEffect;
+        
+        private static SteamVR_Action_Boolean p_default_ConfirmAddEffect;
+        
+        private static SteamVR_Action_Boolean p_default_ConfirmDeleteEffect;
+        
         private static SteamVR_Action_Vector2 p_platformer_Move;
         
         private static SteamVR_Action_Boolean p_platformer_Jump;
@@ -161,6 +169,38 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean default_CycleAddEffect
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_CycleAddEffect.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean default_CycleDeleteEffect
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_CycleDeleteEffect.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean default_ConfirmAddEffect
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_ConfirmAddEffect.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean default_ConfirmDeleteEffect
+        {
+            get
+            {
+                return SteamVR_Actions.p_default_ConfirmDeleteEffect.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
         public static SteamVR_Action_Vector2 platformer_Move
         {
             get
@@ -233,6 +273,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_NextScene,
                     SteamVR_Actions.default_MakeBeat,
+                    SteamVR_Actions.default_CycleAddEffect,
+                    SteamVR_Actions.default_CycleDeleteEffect,
+                    SteamVR_Actions.default_ConfirmAddEffect,
+                    SteamVR_Actions.default_ConfirmDeleteEffect,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -254,6 +298,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_NextScene,
                     SteamVR_Actions.default_MakeBeat,
+                    SteamVR_Actions.default_CycleAddEffect,
+                    SteamVR_Actions.default_CycleDeleteEffect,
+                    SteamVR_Actions.default_ConfirmAddEffect,
+                    SteamVR_Actions.default_ConfirmDeleteEffect,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -276,6 +324,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_NextScene,
                     SteamVR_Actions.default_MakeBeat,
+                    SteamVR_Actions.default_CycleAddEffect,
+                    SteamVR_Actions.default_CycleDeleteEffect,
+                    SteamVR_Actions.default_ConfirmAddEffect,
+                    SteamVR_Actions.default_ConfirmDeleteEffect,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset};
@@ -300,6 +352,10 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_NextScene,
                     SteamVR_Actions.default_MakeBeat,
+                    SteamVR_Actions.default_CycleAddEffect,
+                    SteamVR_Actions.default_CycleDeleteEffect,
+                    SteamVR_Actions.default_ConfirmAddEffect,
+                    SteamVR_Actions.default_ConfirmDeleteEffect,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -323,6 +379,10 @@ namespace Valve.VR
             SteamVR_Actions.p_default_SnapTurnRight = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/SnapTurnRight")));
             SteamVR_Actions.p_default_NextScene = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/NextScene")));
             SteamVR_Actions.p_default_MakeBeat = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/MakeBeat")));
+            SteamVR_Actions.p_default_CycleAddEffect = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/CycleAddEffect")));
+            SteamVR_Actions.p_default_CycleDeleteEffect = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/CycleDeleteEffect")));
+            SteamVR_Actions.p_default_ConfirmAddEffect = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/ConfirmAddEffect")));
+            SteamVR_Actions.p_default_ConfirmDeleteEffect = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/ConfirmDeleteEffect")));
             SteamVR_Actions.p_platformer_Move = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/platformer/in/Move")));
             SteamVR_Actions.p_platformer_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/platformer/in/Jump")));
             SteamVR_Actions.p_buggy_Steering = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/buggy/in/Steering")));

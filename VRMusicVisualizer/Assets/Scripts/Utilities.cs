@@ -16,7 +16,7 @@ namespace Assets.Scripts{
             Vector3 originalScale;
 
             fadeOutClock += deltaTime;
-            // every tenth of a second
+            // every twentieth of a second
             if (fadeOutClock > 0.05f) {
                 fadeOutClock = 0.0f;
                 // go through all objects
@@ -53,7 +53,7 @@ namespace Assets.Scripts{
             Vector3 originalScale;
 
             fadeOutClock += deltaTime;
-            // every tenth of a second
+            // every twentieth of a second
             if (fadeOutClock > 0.05f) {
                 fadeOutClock = 0.0f;
                 // go through all objects

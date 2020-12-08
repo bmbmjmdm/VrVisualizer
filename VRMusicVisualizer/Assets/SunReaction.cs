@@ -24,11 +24,12 @@ public class SunReaction : MonoBehaviour
     {
         BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
-        if (active) CreateObjs(false);
-        else {
+        // for some reason suns act funny when we dont fade them in, so fade them in even if theyre on by default
+        //if (active) CreateObjs(false);
+        //else {
             realObjs = new GameObject[numSuns];
             destroyed = true;
-        }
+        //}
     }
 
     void CreateObjs(Boolean small) {

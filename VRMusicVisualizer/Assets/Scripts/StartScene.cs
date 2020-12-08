@@ -10,7 +10,7 @@ namespace Assets.Scripts {
     {
 
         void Start() {
-            StartCoroutine(LoadYourAsyncScene("AllScene"));
+            StartCoroutine(LoadYourAsyncScene("CustomScene"));
         }
 
         IEnumerator LoadYourAsyncScene(string sceneName)

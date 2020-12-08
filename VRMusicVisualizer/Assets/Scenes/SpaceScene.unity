@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: b6cca299120e7b64286a9608a92754cc, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -821,10 +821,22 @@ MonoBehaviour:
   MakeBeat:
     actionPath: /actions/default/in/MakeBeat
     needsReinit: 0
+  CycleAddEffect:
+    actionPath: /actions/default/in/CycleAddEffect
+    needsReinit: 0
+  CycleDeleteEffect:
+    actionPath: /actions/default/in/CycleDeleteEffect
+    needsReinit: 0
+  ConfirmAddEffect:
+    actionPath: /actions/default/in/ConfirmAddEffect
+    needsReinit: 0
+  ConfirmDeleteEffect:
+    actionPath: /actions/default/in/ConfirmDeleteEffect
+    needsReinit: 0
   handLeft: 1
   handRight: 2
   nextScene: NatureScene
-  prevScene: AllScene
+  prevScene: CustomScene
 --- !u!4 &1395486317
 Transform:
   m_ObjectHideFlags: 0
@@ -1454,7 +1466,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121691319}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 120ca4c4f9442e14db8c72acac5da136, type: 3}
   m_Name: 

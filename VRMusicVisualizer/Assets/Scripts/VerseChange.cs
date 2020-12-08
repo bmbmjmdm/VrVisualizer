@@ -17,16 +17,14 @@ namespace Assets.Scripts
         private float clock2 = 0f;
         public bool checkVerse = false;
 
+        public void Awake () {
+            BeatCollector.resetEvents();
+        }
         public void Start()
         {
             // this turns on 1 effect at the start of the program
             if (checkVerse) {
                 BeatCollector.verseChange = true;
-            }
-            // Hacky, but this works because we only have 1 scene that uses events
-            // This makes it so when the user leaves the event-relying (which is checkVerse relying), it'll clear the old event listeners
-            else {
-                BeatCollector.resetEvents();
             }
         }
 
