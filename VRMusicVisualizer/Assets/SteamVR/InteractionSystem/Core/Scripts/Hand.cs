@@ -1658,6 +1658,8 @@ namespace Valve.VR.InteractionSystem
 
             this.BroadcastMessage("SetInputSource", handType, SendMessageOptions.DontRequireReceiver); // let child objects know we've initialized
             this.BroadcastMessage("OnHandInitialized", deviceIndex, SendMessageOptions.DontRequireReceiver); // let child objects know we've initialized
+
+
         }
 
         public void SetRenderModel(GameObject prefab)

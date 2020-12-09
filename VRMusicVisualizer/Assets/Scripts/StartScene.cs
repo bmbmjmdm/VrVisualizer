@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 namespace Assets.Scripts {
 
@@ -10,7 +11,11 @@ namespace Assets.Scripts {
     {
 
         void Start() {
-            StartCoroutine(LoadYourAsyncScene("CustomScene"));
+            string scene = "SpaceScene";
+            if (File.Exists(Application.persistentDataPath + "/savedEnvironment.vrmv")) {
+                scene = "CustomScene";
+            }
+            StartCoroutine(LoadYourAsyncScene(scene));
         }
 
         IEnumerator LoadYourAsyncScene(string sceneName)

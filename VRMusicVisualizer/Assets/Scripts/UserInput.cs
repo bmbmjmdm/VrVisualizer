@@ -22,7 +22,7 @@ namespace Assets.Scripts {
         private bool changingScene = false;
         private bool isAddingEffect = false;
         private bool isDeletingEffect = false;
-        private float clock = 1.5f;
+        private float clock = 1f;
 
         void OnDisable() {
             ChangeScene.RemoveOnStateDownListener(triggerPrevScene, handLeft);
@@ -48,24 +48,71 @@ namespace Assets.Scripts {
         
         public void triggerPrevScene(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (changingScene) return;
+
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsLT && !IntroProgress.needsLT_2) return;
+            if (!IntroProgress.completedIntro) {
+                if (IntroProgress.needsLT) {
+                    IntroProgress.needsLT = false;
+                    IntroProgress.needsLT_2 = true;
+                }
+                else {
+                    IntroProgress.needsLT_2 = false;
+                    IntroProgress.needsButton1 = true;
+                }
+            }
+
             changingScene = true;
             StartCoroutine(LoadYourAsyncScene(prevScene));
         }
         
         public void triggerNextScene(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (changingScene) return;
+            
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsRT) return;
+            if (!IntroProgress.completedIntro) {
+                IntroProgress.needsRT = false;
+                IntroProgress.needsLT = true;
+            }
+
             changingScene = true;
             StartCoroutine(LoadYourAsyncScene(nextScene));
         }   
         
         public void triggerBeat(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsGrip) return;
+            if (!IntroProgress.completedIntro) {
+                IntroProgress.needsGrip = false;
+                IntroProgress.needsRT = true;
+            }
+
             BeatCollector.maxOutBeat();
         }  
         
         public void cycleEffect(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (SceneManager.GetActiveScene().name != "CustomScene") return;
+
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsButton1 && !IntroProgress.needsButton1_2 && !IntroProgress.needsButton2 && !IntroProgress.needsButton2_2) return;
+            if (!IntroProgress.completedIntro && (IntroProgress.needsButton1 || IntroProgress.needsButton1_2)) {
+                if (IntroProgress.needsButton1) {
+                    IntroProgress.needsButton1 = false;
+                    IntroProgress.needsButton2 = true;
+                }
+                else {
+                    IntroProgress.needsButton1_2 = false;
+                    IntroProgress.needsButton2_2 = true;
+                }
+            }
+
             if (clock > 0f) return;
-            clock = 1f;
+            clock = 0.75f;
             
             if (this.isDeletingEffect) {
                 this.isDeletingEffect = false;
@@ -78,6 +125,20 @@ namespace Assets.Scripts {
         
         public void confirmEffect(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (SceneManager.GetActiveScene().name != "CustomScene") return;
+
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsButton2 && !IntroProgress.needsButton2_2) return;
+            if (!IntroProgress.completedIntro) {
+                if (IntroProgress.needsButton2) {
+                    IntroProgress.needsButton2 = false;
+                    IntroProgress.needsButton1_2 = true;
+                }
+                else {
+                    IntroProgress.needsButton2_2 = false;
+                    IntroProgress.needsButton3 = true;
+                }
+            }
             
             if (this.isAddingEffect) {
                 this.isAddingEffect = false;
@@ -87,8 +148,17 @@ namespace Assets.Scripts {
         
         public void cycleDeleteEffect(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (SceneManager.GetActiveScene().name != "CustomScene") return;
+
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsButton3 && !IntroProgress.needsButton4) return;
+            if (!IntroProgress.completedIntro && IntroProgress.needsButton3) {
+                IntroProgress.needsButton3 = false;
+                IntroProgress.needsButton4 = true;
+            }
+
             if (clock > 0f) return;
-            clock = 1f;
+            clock = 0.75f;
             
             if (this.isAddingEffect) {
                 this.isAddingEffect = false;
@@ -101,6 +171,15 @@ namespace Assets.Scripts {
         
         public void confirmDeleteEffect(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
             if (SceneManager.GetActiveScene().name != "CustomScene") return;
+
+            // introduction logic
+            if (IntroProgress.needsFinish) finishTutorial();
+            if (!IntroProgress.completedIntro && !IntroProgress.needsButton4) return;
+            if (!IntroProgress.completedIntro) {
+                IntroProgress.needsButton4 = false;
+                IntroProgress.needsFinish = true;
+            }
+
             
             if (this.isDeletingEffect) {
                 this.isDeletingEffect = false;
@@ -131,6 +210,12 @@ namespace Assets.Scripts {
             if (clock > 0f) {
                 clock -= Time.deltaTime;
             }
+        }
+
+        void finishTutorial () {
+            IntroProgress.needsFinish = false;
+            IntroProgress.completedIntro = true;
+            BeatCollector.needSave = true;
         }
     }
 

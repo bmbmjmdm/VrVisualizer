@@ -28,7 +28,7 @@ public class FlowerReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeatCollector.registerBeatListener(recieveBeat);
+        //BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
         if (active) CreateObjs(false);
         else {

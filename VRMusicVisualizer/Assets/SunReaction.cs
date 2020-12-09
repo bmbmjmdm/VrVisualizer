@@ -22,7 +22,7 @@ public class SunReaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeatCollector.registerBeatListener(recieveBeat);
+        //BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
         // for some reason suns act funny when we dont fade them in, so fade them in even if theyre on by default
         //if (active) CreateObjs(false);
