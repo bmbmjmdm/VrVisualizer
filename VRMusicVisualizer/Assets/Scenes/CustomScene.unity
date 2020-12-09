@@ -1109,8 +1109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 1588090451174212, guid: c737dd230724d61469e1c672cf47ed9e, type: 3}
-  numBuns: 1000
-  percentChange: 50
+  numBuns: 500
+  percentChange: 75
   bunForce: 4
   bunTorque: 15
   active: 0
@@ -1173,8 +1173,6 @@ MonoBehaviour:
   confirmRemove:
     actionPath: /actions/default/in/ConfirmDeleteEffect
     needsReinit: 0
-  handLeft: {fileID: 0}
-  handRight: {fileID: 0}
 --- !u!114 &1230824490
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -347,6 +347,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1887359424}
+  addEffect:
+    actionPath: 
+    needsReinit: 0
+  confirmAdd:
+    actionPath: 
+    needsReinit: 0
+  removeEffect:
+    actionPath: 
+    needsReinit: 0
+  confirmRemove:
+    actionPath: 
+    needsReinit: 0
 --- !u!114 &424839308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,8 +1504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bunny: {fileID: 1588090451174212, guid: c737dd230724d61469e1c672cf47ed9e, type: 3}
-  numBuns: 1000
-  percentChange: 50
+  numBuns: 500
+  percentChange: 75
   bunForce: 4
   bunTorque: 15
   active: 1

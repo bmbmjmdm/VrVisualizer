@@ -97,7 +97,7 @@ public class BunnyReaction : MonoBehaviour
                 changeSetLeftBound = rand;
                 changeSetRightBound = rand + sizeRange;
             }
-            if (hasBeat && clock >= 0.65f) {
+            if (hasBeat && clock >= 0.75f) {
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
                     // 50/50 shot
                     int rand = UnityEngine.Random.Range(0, 2);
@@ -113,7 +113,7 @@ public class BunnyReaction : MonoBehaviour
                         realObjsAnimators[i].SetInteger("AnimIndex", HOP);
                         realObjsAnimators[i].SetTrigger("Next");
                         // jump "forward" based on its rotation
-                        rigBod.AddForce(realObjs[i].transform.forward * bunForce, ForceMode.VelocityChange);
+                        StartCoroutine(delayedForce(rigBod, realObjs[i].transform.forward * bunForce));
                     }
                 }
                 hasBeat = false;
@@ -126,6 +126,12 @@ public class BunnyReaction : MonoBehaviour
                 clock += Time.deltaTime;
             }
         }
+    }
+    
+    // delay the jump forward by a split second
+    IEnumerator delayedForce(Rigidbody rigBod, Vector3 vector) {
+        yield return new WaitForSeconds(0.13f);
+        rigBod.AddForce(vector, ForceMode.VelocityChange);
     }
 
     void recieveBeat() {
