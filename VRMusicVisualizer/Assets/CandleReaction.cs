@@ -60,7 +60,7 @@ public class CandleReaction : MonoBehaviour
                 if (realObjs[i] == null) {
                     int candleIndex = UnityEngine.Random.Range(0, candles.Length);
                     Transform t = new GameObject().transform;
-                    t.position += Vector3.up * UnityEngine.Random.Range(-10.0f, -1.0f);
+                    t.position += Vector3.up * UnityEngine.Random.Range(-100.0f, -10.0f);
                     t.position += Vector3.right * UnityEngine.Random.Range(-50.0f, 50.0f);
                     t.position += Vector3.forward * UnityEngine.Random.Range(-50.0f, 50.0f);
                     realObjs[i] = (GameObject) Instantiate(candles[candleIndex], t.position, t.rotation);

@@ -92,5 +92,15 @@ namespace Assets.Scripts{
             return false;
         }
 
+        // within 100 of player on 2d axis is too close
+        public static Boolean isNearPlayerFar (Vector3 position) {
+            if (position.x > -100.0f && position.x < 100.0f) {
+                if (position.z > -100.0f && position.z < 100.0f) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
      }
 }

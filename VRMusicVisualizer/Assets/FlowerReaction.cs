@@ -30,11 +30,12 @@ public class FlowerReaction : MonoBehaviour
     {
         //BeatCollector.registerBeatListener(recieveBeat);
         BeatCollector.registerVerseListener(toggleActive);
-        if (active) CreateObjs(false);
-        else {
+        // for some reason suns act funny when we dont fade them in, so we fade them in even if theyre on by default. do this for flowers just incase im missing something
+        //if (active) CreateObjs(false);
+        //else {
             realObjs = new GameObject[numFlowers];
             destroyed = true;
-        }
+        //}
     }
 
     void CreateObjs(Boolean small) {
