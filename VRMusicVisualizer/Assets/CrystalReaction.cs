@@ -93,13 +93,16 @@ public class CrystalReaction : MonoBehaviour
                 changeSetRightBound = rand + sizeRange;
             }
             if (hasBeat) {
-                // on each beat, change the color of crystals in our current range by destroying them and replacing with a random other colored one
-                int ran = UnityEngine.Random.Range(0, crystals.Length);
-                GameObject prefab = crystals[ran];
+                // on each beat, change the color of crystals in our current range by swapping them with a random other crystal in our range (swapping positions)
+                // in order to do this, we swap i's position with a random entry from [i, changeSetRightBound]. Repeating this until the end gives us a random new position for each object except the last one in the most efficient way possible
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
-                    Transform t = realObjs[i].transform;
-                    Destroy(realObjs[i]);
-                    realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+                    int ran = UnityEngine.Random.Range(i + 1, changeSetRightBound);
+                    // edge case of the last object in our list, which we default to swapping with the first
+                    if (ran >= changeSetRightBound) ran = changeSetLeftBound;
+                    Vector3 iVector = realObjs[i].transform.position;
+                    Vector3 randomVector = realObjs[ran].transform.position;
+                    realObjs[i].transform.position = randomVector;
+                    realObjs[ran].transform.position = iVector;
                 }
                 hasBeat = false;
             }

@@ -19,7 +19,7 @@ namespace Assets.Scripts
             // 1. high spectrums tend to be lower amplitude than low spectrum
             // 2. high spectrum has higher # to divide by, which can make them seem even smaller 
             // Counter argument: we're using percents to describe these buckets, so as long as they're consistently smaller/larger/etc, it shouldnt matter
-            var spectrum = GetSpectrumData().ToList();
+            var spectrum = GetSpectrumData();
             // low frequency zone
             float lowAv = 0;
             for (int i = 0; i <= 8; i++) {

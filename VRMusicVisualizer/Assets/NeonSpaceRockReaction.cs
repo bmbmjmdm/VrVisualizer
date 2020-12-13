@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System; 
 
+
 namespace Assets.Scripts
 {
 public class NeonSpaceRockReaction : MonoBehaviour
@@ -69,6 +70,7 @@ public class NeonSpaceRockReaction : MonoBehaviour
     void CreateObjs(Boolean small) {
         realObjs = new GameObject[numRocks];
         partOfSet = new int[numRocks, 2];
+        InitializePool();
         for (int i = 0; i < numRocks; i++) {
             // determine which prefab set we'll be using for this rock
             int set = UnityEngine.Random.Range(0, 12);
@@ -91,9 +93,11 @@ public class NeonSpaceRockReaction : MonoBehaviour
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);
             }
+            AddToPool(realObjs[i], set, ran);
         }
         sizeRange = (int) Math.Floor(percentChange * realObjs.Length / 100); 
         originalScales[0] = new Vector3(1, 1, 1);
+        FillOutPool();
     }
 
     // Update is called once per frame
@@ -105,7 +109,8 @@ public class NeonSpaceRockReaction : MonoBehaviour
                 // we're still destroying
                 Boolean isDestroyed = !Utilities.fadeOutObjects(realObjs, originalScales, ref fadeOutClock, Time.deltaTime);
                 if (isDestroyed) {
-                    // we're done destroying
+                    // we're done destroying, make sure our pool is cleaned up
+                    DestroyPool();
                     destroyed = true;
                 }
             }
@@ -137,21 +142,20 @@ public class NeonSpaceRockReaction : MonoBehaviour
             if (hasBeat) {
                 // on each beat, change the prefab of rocks in our current range by destroying them and replacing with a random other one in their set
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
-                    // keep the transform
-                    Transform t = realObjs[i].transform;
-                    // look up their set and previous prefab index
+                    // keep the old position
+                    Vector3 position = realObjs[i].transform.position;
+                    // look up their set and previous stage index
                     int set = partOfSet[i, 0];
-                    int prefabIndex = partOfSet[i, 1];
-                    // select a new prefab index that's sequential from the last one
-                    prefabIndex ++;
-                    if (prefabIndex > 2) prefabIndex = 0;
-                    // grab the new prefab from the set
-                    GameObject prefab = rocks[set, prefabIndex];
-                    // destroy old and instantiate new
-                    Destroy(realObjs[i]);
-                    realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+                    int stage = partOfSet[i, 1];
+                    // select a new stage index that's sequential from the last one
+                    stage ++;
+                    if (stage > 2) stage = 0;
+                    // deactivate our old object, grab a new active one from object pool, and use the old position on the new one
+                    realObjs[i].SetActive(false);
+                    realObjs[i] = GetNext(set, stage);
+                    realObjs[i].transform.position = position;
                     // store new prefab index
-                    partOfSet[i, 1] = prefabIndex;
+                    partOfSet[i, 1] = stage;
                 }
                 hasBeat = false;
             }
@@ -164,6 +168,111 @@ public class NeonSpaceRockReaction : MonoBehaviour
 
     void toggleActive() {
         active = !active;
+    }
+
+
+
+// ================================================================ object pool logic =======================================
+
+    // this simply resets all the lists for our pool
+    void InitializePool() {
+        // look through all current instances of the given set
+        objectPool = new List<GameObject[]>[12];
+        for (int set = 0; set < 12; set++) {
+            objectPool[set] = new List<GameObject[]>();
+        }
+    }
+
+    void AddToPool(GameObject obj, int set, int stage) {
+        List<GameObject[]> setList = objectPool[set];
+        // look through all current instances of the given set
+        for (int i = 0; i < setList.Count; i++) {
+            // look at the proper stage in each of those sets to try and find an empty one
+            if (setList[i][stage] == null) {
+                // we found one!
+                setList[i][stage] = obj;
+                return;
+            }
+        }
+        // uh oh, none of our current sets have an empty stage for us to add to, we'll have to make a brand new set
+        GameObject[] newSet = new GameObject[3];
+        newSet[stage] = obj;
+        setList.Add(newSet);
+    }
+
+    void FillOutPool() {
+        // look through all set lists
+        for (int set = 0; set < 12; set++) {
+            List<GameObject[]> setList = objectPool[set];
+            // look at all sets in our current list
+            for (int i = 0; i < setList.Count; i++) {
+                GameObject[] stageList = setList[i];
+                // look at all stages in our current set
+                for (int stage = 0; stage < 3; stage++) {
+                    GameObject obj = stageList[stage];
+                    // if the current stage is null, create an object for it
+                    if (obj == null) {
+                        Transform t = new GameObject().transform;
+                        stageList[stage] = (GameObject) Instantiate(rocks[set, stage], t.position, t.rotation);
+                        // because its not in use yet (hence why we're making it in FillOutPool), set it to inactive
+                        stageList[stage].SetActive(false);
+                    }
+                }
+            }
+        }
+    }
+
+    // go through all objects in our object pool and destroy any that were missed by fadeOutObject
+    void DestroyPool() {
+        // look through all set lists
+        for (int set = 0; set < 12; set++) {
+            List<GameObject[]> setList = objectPool[set];
+            // look at all sets in our current list
+            for (int i = 0; i < setList.Count; i++) {
+                GameObject[] stageList = setList[i];
+                // look at all stages in our current set
+                for (int stage = 0; stage < 3; stage++) {
+                    GameObject obj = stageList[stage];
+                    // if the current stage isn't destroyed, destroy it
+                    if (obj != null) {
+                        GameObject.Destroy(obj);
+                    }
+                }
+            }
+        }
+    }
+
+    // An array of Lists of integr arrays. 
+    // The initial array index corresponds to the set #
+    // Then the List index corresponds to that particular set instance
+    // Then the final array index corresponds to the particular stage in the particular set
+    private List<GameObject[]>[] objectPool;
+
+    // it's assumed that the previous stage has been deactivated and the nextStage has been verified <=2
+    GameObject GetNext(int set, int nextStage) {
+        List<GameObject[]> setList = objectPool[set];
+        // look through all current instances of the given set
+        for (int i = 0; i < setList.Count; i++) {
+            // look at the proper stage in each of those sets
+            if (!setList[i][nextStage].activeInHierarchy) {
+                // looks like we found an inactive one! lets make it active and return it so the caller can move its position
+                setList[i][nextStage].SetActive(true);
+                return setList[i][nextStage];
+            }
+        }
+        // uh oh, we got through all our sets and couldn't find a usable stage instance. let's add a new one
+        GameObject[] newSet = new GameObject[3];
+        Transform t = new GameObject().transform;
+        newSet[0] = (GameObject) Instantiate(rocks[set, 0], t.position, t.rotation);
+        newSet[1] = (GameObject) Instantiate(rocks[set, 1], t.position, t.rotation);
+        newSet[2] = (GameObject) Instantiate(rocks[set, 2], t.position, t.rotation);
+        setList.Add(newSet);
+        // now turn on the one we want and turn off the others
+        newSet[0].SetActive(false);
+        newSet[1].SetActive(false);
+        newSet[2].SetActive(false);
+        newSet[nextStage].SetActive(true);
+        return newSet[nextStage];
     }
 }
 }

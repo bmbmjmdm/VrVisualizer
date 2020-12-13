@@ -12,13 +12,13 @@ public class CandleReaction : MonoBehaviour
     private GameObject[] realObjs;
     public bool active = true;
     private float clock = 0f;
+    // NEVER START DESTROYED AS FALSE HERE or else spawnCandles will be called with null objects
     private bool destroyed = true;
 
     // Start is called before the first frame update
     void Start()
     {
         BeatCollector.registerVerseListener(toggleActive);
-        realObjs = new GameObject[numCandles];
     }
 
     // Update is called once per frame
@@ -29,10 +29,14 @@ public class CandleReaction : MonoBehaviour
             if (!destroyed) {
                 spawnCandles(-1f);
                 destroyed = true;
+                DestroyObjs();
             }
         }
         // we're active
         else {
+            if (destroyed) {
+                CreateObjs();
+            }
             destroyed = false;
             clock += Time.deltaTime;
             
@@ -44,26 +48,44 @@ public class CandleReaction : MonoBehaviour
         }
     }
 
+    void CreateObjs () {
+        realObjs = new GameObject[numCandles];
+        // goes through entire array and fill it with random prefabs/inactive objects
+        for (int i = 0; i < numCandles; i++) {
+            int candleIndex = UnityEngine.Random.Range(0, candles.Length);
+            Transform t = new GameObject().transform;
+            realObjs[i] = (GameObject) Instantiate(candles[candleIndex], t.position, t.rotation);
+            realObjs[i].SetActive(false);
+        }
+    }
+
+    void DestroyObjs () {
+        // goes through entire array and destroy the objects
+        for (int i = 0; i < numCandles; i++) {
+            GameObject.Destroy(realObjs[i]);
+        }
+    }
+
     // spawns percent of numCandles below the user. if this percent is lower than the previous one, it unspawns candles
     void spawnCandles(float percent) {
         // goes through entire array
         for (int i = 0; i < numCandles; i++) {
             bool shouldHide = (i/(float) numCandles) > percent;
-            // destroy all excess candles
+            // inactivate all excess candles
             if (shouldHide) {
-                if (realObjs[i] != null) {
-                    GameObject.Destroy(realObjs[i]);
+                if (realObjs[i].activeInHierarchy) {
+                    realObjs[i].SetActive(false);
                 }
             }
-            // spawn all necessary candles 
+            // activate all necessary candles at random locations
             else {
-                if (realObjs[i] == null) {
-                    int candleIndex = UnityEngine.Random.Range(0, candles.Length);
+                if (!realObjs[i].activeInHierarchy) {
                     Transform t = new GameObject().transform;
                     t.position += Vector3.up * UnityEngine.Random.Range(-100.0f, -10.0f);
                     t.position += Vector3.right * UnityEngine.Random.Range(-50.0f, 50.0f);
                     t.position += Vector3.forward * UnityEngine.Random.Range(-50.0f, 50.0f);
-                    realObjs[i] = (GameObject) Instantiate(candles[candleIndex], t.position, t.rotation);
+                    realObjs[i].transform.position = t.position;
+                    realObjs[i].SetActive(true);
                 }
             }
         }

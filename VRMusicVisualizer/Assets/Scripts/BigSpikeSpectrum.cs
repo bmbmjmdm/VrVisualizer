@@ -17,7 +17,7 @@ namespace Assets.Scripts
 
         public void Start()
         {
-            for (int i = 0; i < spectrums.Count(); i++) {
+            for (int i = 0; i < 1024; i++) {
                 spectrums[i] = new float[thresholdWindowSize];
                 for (int r = 0; r < thresholdWindowSize; r++) {
                     spectrums[i][r] = 0;
@@ -30,7 +30,7 @@ namespace Assets.Scripts
             bool peaked = false;
             var curSpec = GetSpectrumData();
             // Process each frequency bucket
-            for (int i = 0; i < spectrums.Count(); i++) {
+            for (int i = 0; i < 1024; i++) {
                 if(updateSpectrum(i, curSpec)) peaked = true;
             }
 
@@ -40,13 +40,13 @@ namespace Assets.Scripts
         }
 
         public bool updateSpectrum(int index, float[] curSpec) {
-            for (int i = spectrums[index].Count() - 1; i > 0; i--) {
+            for (int i = thresholdWindowSize - 1; i > 0; i--) {
                 spectrums[index][i] = spectrums[index][i-1];
             }
             spectrums[index][0] = curSpec[index];
             bool more = true;
             bool peak = false;
-            for (int i = 1; i < spectrums[index].Count(); i++) {
+            for (int i = 1; i < thresholdWindowSize; i++) {
                 if (spectrums[index][0] < spectrums[index][i]) more = false;
                 if (spectrums[index][0] > spectrums[index][i]*10) peak = true;
             }
