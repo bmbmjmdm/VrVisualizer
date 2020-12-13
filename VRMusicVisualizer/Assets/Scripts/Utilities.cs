@@ -27,8 +27,16 @@ namespace Assets.Scripts{
                     // check if its already been destroyed
                     if (realObjs[i] == null) continue;
                     // and decrease their scale by 10% of the original scale
-                    if (realObjs[i].transform.localScale.x > 0) {
+                    if (realObjs[i].transform.localScale.x > originalScale.x) {
+                        realObjs[i].transform.localScale = originalScale;
+                        anyFadeOut = true;
+                    }
+                    else if (realObjs[i].transform.localScale.x > originalScale.x * 0.1f) {
                         realObjs[i].transform.localScale -= originalScale * 0.1f;
+                        anyFadeOut = true;
+                    }
+                    else if (realObjs[i].transform.localScale.x > 0) {
+                        realObjs[i].transform.localScale = originalScale * 0;
                         anyFadeOut = true;
                     }
                     else {

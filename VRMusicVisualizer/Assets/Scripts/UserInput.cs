@@ -112,7 +112,7 @@ namespace Assets.Scripts {
             }
 
             if (clock > 0f) return;
-            clock = 0.75f;
+            clock = 1f;
             
             if (this.isDeletingEffect) {
                 this.isDeletingEffect = false;
@@ -158,7 +158,7 @@ namespace Assets.Scripts {
             }
 
             if (clock > 0f) return;
-            clock = 0.75f;
+            clock = 1f;
             
             if (this.isAddingEffect) {
                 this.isAddingEffect = false;

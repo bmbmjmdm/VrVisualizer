@@ -18,6 +18,7 @@ public class IntroScript : MonoBehaviour
     public SteamVR_Action_Boolean confirmRemove;
     private Hand handLeft; 
     private Hand handRight;
+    private bool doneIntro = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class IntroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (doneIntro) return;
       // needs to turn on music
       if (IntroProgress.needsMusic) {
         if (hasBeat) {
@@ -100,6 +102,7 @@ public class IntroScript : MonoBehaviour
       }
       else {
         text.text = "";
+        doneIntro = true;
       }
     }
 

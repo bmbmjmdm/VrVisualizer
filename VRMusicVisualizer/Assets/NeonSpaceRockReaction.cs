@@ -240,9 +240,10 @@ public class NeonSpaceRockReaction : MonoBehaviour
                 }
             }
         }
+        objectPool = new List<GameObject[]>[0];
     }
 
-    // An array of Lists of integr arrays. 
+    // An array of Lists of gameobject arrays. 
     // The initial array index corresponds to the set #
     // Then the List index corresponds to that particular set instance
     // Then the final array index corresponds to the particular stage in the particular set

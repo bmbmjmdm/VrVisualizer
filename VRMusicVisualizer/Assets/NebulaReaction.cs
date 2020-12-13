@@ -36,6 +36,7 @@ public class NebulaReaction : MonoBehaviour
 
     void CreateObjs(Boolean small) {
         realObjs = new GameObject[numNebuli];
+        InitializePool();
         for (int i = 0; i < numNebuli; i++) {
             // exclusive so dont have to do Length-1
             int ran = UnityEngine.Random.Range(0, nebuli.Length);
@@ -59,6 +60,7 @@ public class NebulaReaction : MonoBehaviour
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);
             }
+            AddToPool(realObjs[i], ran);
         }
         sizeRange = (int) Math.Floor(percentChange * realObjs.Length / 100); 
         originalScales[0] = nebuli[0].transform.localScale;
@@ -75,6 +77,7 @@ public class NebulaReaction : MonoBehaviour
                 if (isDestroyed) {
                     // we're done destroying
                     destroyed = true;
+                    DestroyPool();
                 }
             }
         }
@@ -103,20 +106,16 @@ public class NebulaReaction : MonoBehaviour
                 changeSetRightBound = rand + sizeRange;
             }
             if (hasBeat) {
-                // on each beat, change the color of nebuli in our current range by swapping them with a random other one in our range (swapping positions+rotations)
-                // in order to do this, we swap i's position with a random entry from [i, changeSetRightBound]. Repeating this until the end gives us a random new position for each object except the last one in the most efficient way possible
+                int ran = UnityEngine.Random.Range(0, nebuli.Length);
+                // go through change set and activate crystals of the new color for all of them
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
-                    int ran = UnityEngine.Random.Range(i + 1, changeSetRightBound);
-                    // edge case of the last object in our list, which we default to swapping with the first
-                    if (ran >= changeSetRightBound) ran = changeSetLeftBound;
-                    Vector3 iPosition = realObjs[i].transform.position;
-                    Quaternion iRotation = realObjs[i].transform.rotation;
-                    Vector3 randomVector = realObjs[ran].transform.position;
-                    Quaternion randomRotation = realObjs[ran].transform.rotation;
-                    realObjs[i].transform.position = randomVector;
-                    realObjs[i].transform.rotation = randomRotation;
-                    realObjs[ran].transform.position = iPosition;
-                    realObjs[ran].transform.rotation = iRotation;
+                    Vector3 position = realObjs[i].transform.position;
+                    Quaternion rotation = realObjs[i].transform.rotation;
+                    realObjs[i].SetActive(false);
+                    GameObject newNeb = GetNext(ran);
+                    realObjs[i] = newNeb;
+                    realObjs[i].transform.position = position;
+                    realObjs[i].transform.rotation = rotation;
                 }
                 hasBeat = false;
             }
@@ -131,6 +130,66 @@ public class NebulaReaction : MonoBehaviour
 
     void toggleActive() {
         active = !active;
+    }
+
+    
+
+
+// ================================================================ object pool logic =======================================
+
+    // this simply resets all the lists for our pool
+    void InitializePool() {
+        // look through all current instances of the given color
+        objectPool = new List<GameObject>[nebuli.Length];
+        for (int color = 0; color < nebuli.Length; color++) {
+            objectPool[color] = new List<GameObject>();
+        }
+    }
+
+    void AddToPool(GameObject obj, int color) {
+        List<GameObject> colorList = objectPool[color];
+        colorList.Add(obj);
+    }
+
+    // go through all objects in our object pool and destroy any that were missed by fadeOutObject
+    void DestroyPool() {
+        // look through all colors lists
+        for (int color = 0; color < nebuli.Length; color++) {
+            List<GameObject> colorList = objectPool[color];
+            // look at all objs in our current list
+            for (int i = 0; i < colorList.Count; i++) {
+                GameObject obj = colorList[i];
+                // if the current stage isn't destroyed, destroy it
+                if (obj != null) {
+                    GameObject.Destroy(obj);
+                }
+            }
+        }
+        objectPool = new List<GameObject>[0];
+    }
+
+    // An array of Lists of gameobjects. 
+    // The initial array index corresponds to the crystal color
+    // Then the List index corresponds to the gameobject instance
+    private List<GameObject>[] objectPool;
+
+    // it's assumed that the previous stage has been deactivated and the nextStage has been verified <=2
+    GameObject GetNext(int color) {
+        List<GameObject> colorList = objectPool[color];
+        // look through all current instances of the given color
+        for (int i = 0; i < colorList.Count; i++) {
+            if (!colorList[i].activeInHierarchy) {
+                // looks like we found an inactive one! lets make it active and return it so the caller can move its position
+                colorList[i].SetActive(true);
+                return colorList[i];
+            }
+        }
+        // uh oh, we got through all our colors and couldn't find a usable stage instance. let's add a new one
+        Transform t = new GameObject().transform;
+        GameObject newObj = (GameObject) Instantiate(nebuli[color], t.position, t.rotation);
+        colorList.Add(newObj);
+        newObj.SetActive(true);
+        return newObj;
     }
 }
 }

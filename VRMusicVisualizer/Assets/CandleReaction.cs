@@ -64,6 +64,7 @@ public class CandleReaction : MonoBehaviour
         for (int i = 0; i < numCandles; i++) {
             GameObject.Destroy(realObjs[i]);
         }
+        realObjs = new GameObject[0];
     }
 
     // spawns percent of numCandles below the user. if this percent is lower than the previous one, it unspawns candles
@@ -82,8 +83,8 @@ public class CandleReaction : MonoBehaviour
                 if (!realObjs[i].activeInHierarchy) {
                     Transform t = new GameObject().transform;
                     t.position += Vector3.up * UnityEngine.Random.Range(-100.0f, -10.0f);
-                    t.position += Vector3.right * UnityEngine.Random.Range(-50.0f, 50.0f);
-                    t.position += Vector3.forward * UnityEngine.Random.Range(-50.0f, 50.0f);
+                    t.position += Vector3.right * UnityEngine.Random.Range(-100.0f, 100.0f);
+                    t.position += Vector3.forward * UnityEngine.Random.Range(-100.0f, 100.0f);
                     realObjs[i].transform.position = t.position;
                     realObjs[i].SetActive(true);
                 }

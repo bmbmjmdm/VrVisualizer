@@ -32,7 +32,7 @@ public class PlanetReaction : MonoBehaviour
         BeatCollector.registerVerseListener(toggleActive);
         if (active) CreateObjs(false);
         else {
-            realObjs = new GameObject[numPlanets];
+            realObjs = null;
             destroyed = true;
         }
     }
@@ -74,6 +74,7 @@ public class PlanetReaction : MonoBehaviour
                 if (isDestroyed) {
                     // we're done destroying
                     destroyed = true;
+                    realObjs = null;
                 }
             }
         }
@@ -83,7 +84,7 @@ public class PlanetReaction : MonoBehaviour
             // if any of them aren't done fading in, dont proceed
             if (destroyed) {
                 // if this is our first iteration after being destroyed, instantiate all objects
-                if (realObjs[0] == null) CreateObjs(true);
+                if (realObjs == null) CreateObjs(true);
                 // we're still growing
                 Boolean isFull = !Utilities.fadeInObjects(realObjs, originalScales, ref fadeOutClock, Time.deltaTime);
                 if (isFull) {
@@ -103,7 +104,7 @@ public class PlanetReaction : MonoBehaviour
                 changeSetLeftBound = rand;
                 changeSetRightBound = rand + sizeRange;
             }
-            if (hasBeat && active) {
+            if (hasBeat) {
                 for (int i = changeSetLeftBound; i < changeSetRightBound; i++) {
                     realObjs[i].transform.localScale = onBeatVector;
                 }

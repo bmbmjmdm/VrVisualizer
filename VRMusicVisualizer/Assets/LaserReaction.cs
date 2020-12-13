@@ -42,12 +42,12 @@ public class LaserReaction : MonoBehaviour
                     y = UnityEngine.Random.Range(-1, 2);
                 }
                 // This places a random point directly in front of the user, up to 30 units away
-                float ranDistance = UnityEngine.Random.Range(5.0f, 30.0f);
-                // It then finds another point within (+-30,+-30,+-30) of that first point 
+                float ranDistance = UnityEngine.Random.Range(15.0f, 40.0f);
+                // It then finds another point within (+-5-30,+-5-30,+-5-30) of that first point 
                 Vector3 pointAlongVisionLine = player.transform.position + fwd * ranDistance;
                 pointAlongVisionLine += Vector3.up * UnityEngine.Random.Range(-ranDistance, ranDistance);
-                pointAlongVisionLine += Vector3.right * UnityEngine.Random.Range(-ranDistance, ranDistance);
-                pointAlongVisionLine += Vector3.forward * UnityEngine.Random.Range(-ranDistance, ranDistance);
+                pointAlongVisionLine += Vector3.right * UnityEngine.Random.Range(-ranDistance/1.5f, ranDistance/1.5f);
+                pointAlongVisionLine += Vector3.forward * UnityEngine.Random.Range(-ranDistance/1.5f, ranDistance/1.5f);
                 // Spawns a laser at that second point, where it flies in laser_movement.cs
                 int ranObj = UnityEngine.Random.Range(0, lasers.Length);
                 GameObject prefab = lasers[ranObj];
