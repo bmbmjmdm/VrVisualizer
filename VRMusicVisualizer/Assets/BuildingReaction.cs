@@ -35,14 +35,14 @@ public class BuildingReaction : MonoBehaviour
         for (int i = 0; i < numBuildings; i++) {
             // unlike most reactions, we dont choose a random prefab, but rather just make 1 of each
             GameObject prefab = buildings[i];
-            Transform t = new GameObject().transform;
-            t.position = new Vector3(0f, 0f, 0f);
+            Vector3 t = new Vector3();
+            t = new Vector3(0f, 0f, 0f);
             do {
-                t.position += Vector3.right * UnityEngine.Random.Range(-200.0f, 200.0f);
-                t.position += Vector3.forward * UnityEngine.Random.Range(-200.0f, 200.0f);
+                t += Vector3.right * UnityEngine.Random.Range(-200.0f, 200.0f);
+                t += Vector3.forward * UnityEngine.Random.Range(-200.0f, 200.0f);
             }
-            while (Utilities.isNearPlayerFar(t.position));
-            realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+            while (Utilities.isNearPlayerFar(t));
+            realObjs[i] = (GameObject) Instantiate(prefab, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);

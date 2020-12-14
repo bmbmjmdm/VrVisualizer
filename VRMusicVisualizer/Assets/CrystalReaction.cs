@@ -29,7 +29,7 @@ public class CrystalReaction : MonoBehaviour
         BeatCollector.registerVerseListener(toggleActive);
         if (active) CreateObjs(false);
         else {
-            realObjs = new GameObject[numCrystals];
+            realObjs = null;
             destroyed = true;
         }
     }
@@ -41,11 +41,11 @@ public class CrystalReaction : MonoBehaviour
             // exclusive so dont have to do Length-1
             int ran = UnityEngine.Random.Range(0, crystals.Length);
             GameObject prefab = crystals[ran];
-            Transform t = new GameObject().transform;
-            t.position = new Vector3(0f, 0f, 0f);
-            t.position += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
-            t.position += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
-            realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+            Vector3 t = new Vector3();
+            t = new Vector3(0f, 0f, 0f);
+            t += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
+            t += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
+            realObjs[i] = (GameObject) Instantiate(prefab, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);
@@ -67,6 +67,7 @@ public class CrystalReaction : MonoBehaviour
                 if (isDestroyed) {
                     // we're done destroying
                     destroyed = true;
+                    realObjs = null;
                     DestroyPool();
                 }
             }
@@ -77,7 +78,7 @@ public class CrystalReaction : MonoBehaviour
             // if any of them aren't done fading in, dont proceed
             if (destroyed) {
                 // if this is our first iteration after being destroyed, instantiate all objects
-                if (realObjs[0] == null) CreateObjs(true);
+                if (realObjs == null) CreateObjs(true);
                 // we're still growing
                 Boolean isFull = !Utilities.fadeInObjects(realObjs, originalScales, ref fadeOutClock, Time.deltaTime);
                 if (isFull) {
@@ -170,8 +171,8 @@ public class CrystalReaction : MonoBehaviour
             }
         }
         // uh oh, we got through all our colors and couldn't find a usable stage instance. let's add a new one
-        Transform t = new GameObject().transform;
-        GameObject newObj = (GameObject) Instantiate(crystals[color], t.position, t.rotation);
+        Vector3 t = new Vector3();
+        GameObject newObj = (GameObject) Instantiate(crystals[color], t, Quaternion.identity);
         colorList.Add(newObj);
         newObj.SetActive(true);
         return newObj;

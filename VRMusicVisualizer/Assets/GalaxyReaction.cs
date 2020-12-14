@@ -35,16 +35,16 @@ public class GalaxyReaction : MonoBehaviour
     void CreateObjs(Boolean small) {
         realObjs = new GameObject[numGalaxies];
         for (int i = 0; i < numGalaxies; i++) {
-            Transform t = new GameObject().transform;
+            Vector3 t = new Vector3();
             // create galaxies all around the player, randomly between -300 and 300 on every axis
             do {
-                t.position += Vector3.up * UnityEngine.Random.Range(-300.0f, 300.0f);
-                t.position += Vector3.right * UnityEngine.Random.Range(-300.0f, 300.0f);
-                t.position += Vector3.forward * UnityEngine.Random.Range(-300.0f, 300.0f);
+                t += Vector3.up * UnityEngine.Random.Range(-300.0f, 300.0f);
+                t += Vector3.right * UnityEngine.Random.Range(-300.0f, 300.0f);
+                t += Vector3.forward * UnityEngine.Random.Range(-300.0f, 300.0f);
             }
             // however dont let them spawn too close to the player
-            while (Utilities.isNearPlayer(t.position));
-            realObjs[i] = (GameObject) Instantiate(galaxy, t.position, t.rotation);
+            while (Utilities.isNearPlayer(t));
+            realObjs[i] = (GameObject) Instantiate(galaxy, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);

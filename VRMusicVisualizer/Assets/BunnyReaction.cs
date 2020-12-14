@@ -44,11 +44,11 @@ public class BunnyReaction : MonoBehaviour
         realObjs = new GameObject[numBuns];
         realObjsAnimators = new Animator[numBuns];
         for (int i = 0; i < numBuns; i++) {
-            Transform t = new GameObject().transform;
-            t.position += Vector3.up * 0.1f;
-            t.position += Vector3.right * UnityEngine.Random.Range(-100.0f, 100.0f);
-            t.position += Vector3.forward * UnityEngine.Random.Range(-100.0f, 100.0f);
-            realObjs[i] = (GameObject) Instantiate(bunny, t.position, t.rotation);
+            Vector3 t = new Vector3();
+            t += Vector3.up * 0.1f;
+            t += Vector3.right * UnityEngine.Random.Range(-100.0f, 100.0f);
+            t += Vector3.forward * UnityEngine.Random.Range(-100.0f, 100.0f);
+            realObjs[i] = (GameObject) Instantiate(bunny, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);

@@ -61,7 +61,7 @@ public class NeonSpaceRockReaction : MonoBehaviour
         }
         if (active) CreateObjs(false);
         else {
-            realObjs = new GameObject[numRocks];
+            realObjs = null;
             partOfSet = new int[numRocks, 2];
             destroyed = true;
         }
@@ -79,16 +79,16 @@ public class NeonSpaceRockReaction : MonoBehaviour
             // store this data so we reuse the same set but dont reuse the same index
             partOfSet[i, 0] = set;
             partOfSet[i, 1] = ran;
-            Transform t = new GameObject().transform;
+            Vector3 t = new Vector3();
             // create rocks all around the player, randomly between -150 and 150 on every axis
             do {
-                t.position += Vector3.up * UnityEngine.Random.Range(15.0f, 250.0f);
-                t.position += Vector3.right * UnityEngine.Random.Range(-250.0f, 250.0f);
-                t.position += Vector3.forward * UnityEngine.Random.Range(-250.0f, 250.0f);
+                t += Vector3.up * UnityEngine.Random.Range(15.0f, 250.0f);
+                t += Vector3.right * UnityEngine.Random.Range(-250.0f, 250.0f);
+                t += Vector3.forward * UnityEngine.Random.Range(-250.0f, 250.0f);
             }
             // however dont let them spawn too close to the player
-            while (Utilities.isNearPlayer(t.position));
-            realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+            while (Utilities.isNearPlayer(t));
+            realObjs[i] = (GameObject) Instantiate(prefab, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);
@@ -112,6 +112,7 @@ public class NeonSpaceRockReaction : MonoBehaviour
                     // we're done destroying, make sure our pool is cleaned up
                     DestroyPool();
                     destroyed = true;
+                    realObjs = null;
                 }
             }
         }
@@ -121,7 +122,7 @@ public class NeonSpaceRockReaction : MonoBehaviour
             // if any of them aren't done fading in, dont proceed
             if (destroyed) {
                 // if this is our first iteration after being destroyed, instantiate all objects
-                if (realObjs[0] == null) CreateObjs(true);
+                if (realObjs == null) CreateObjs(true);
                 // we're still growing
                 Boolean isFull = !Utilities.fadeInObjects(realObjs, originalScales, ref fadeOutClock, Time.deltaTime);
                 if (isFull) {
@@ -212,8 +213,8 @@ public class NeonSpaceRockReaction : MonoBehaviour
                     GameObject obj = stageList[stage];
                     // if the current stage is null, create an object for it
                     if (obj == null) {
-                        Transform t = new GameObject().transform;
-                        stageList[stage] = (GameObject) Instantiate(rocks[set, stage], t.position, t.rotation);
+                        Vector3 t = new Vector3();
+                        stageList[stage] = (GameObject) Instantiate(rocks[set, stage], t, Quaternion.identity);
                         // because its not in use yet (hence why we're making it in FillOutPool), set it to inactive
                         stageList[stage].SetActive(false);
                     }
@@ -263,10 +264,10 @@ public class NeonSpaceRockReaction : MonoBehaviour
         }
         // uh oh, we got through all our sets and couldn't find a usable stage instance. let's add a new one
         GameObject[] newSet = new GameObject[3];
-        Transform t = new GameObject().transform;
-        newSet[0] = (GameObject) Instantiate(rocks[set, 0], t.position, t.rotation);
-        newSet[1] = (GameObject) Instantiate(rocks[set, 1], t.position, t.rotation);
-        newSet[2] = (GameObject) Instantiate(rocks[set, 2], t.position, t.rotation);
+        Vector3 t = new Vector3();
+        newSet[0] = (GameObject) Instantiate(rocks[set, 0], t, Quaternion.identity);
+        newSet[1] = (GameObject) Instantiate(rocks[set, 1], t, Quaternion.identity);
+        newSet[2] = (GameObject) Instantiate(rocks[set, 2], t, Quaternion.identity);
         setList.Add(newSet);
         // now turn on the one we want and turn off the others
         newSet[0].SetActive(false);

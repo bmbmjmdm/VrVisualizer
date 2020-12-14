@@ -24,12 +24,11 @@ public class FireflyReaction : MonoBehaviour
         realObjs = new ParticleSystem[numBunches];
         for (int i = 0; i < numBunches; i++) {
             // exclusive so dont have to do Length-1
-            Transform t = new GameObject().transform;
-            t.position = new Vector3(0f, 0f, 0f);
-            t.position += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
-            t.position += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
-            t.position += Vector3.up * UnityEngine.Random.Range(0.5f, 5.0f);
-            realObjs[i] = (ParticleSystem) Instantiate(particleEffect, t.position, t.rotation);
+            Vector3 t = new Vector3();
+            t += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
+            t += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
+            t += Vector3.up * UnityEngine.Random.Range(0.5f, 5.0f);
+            realObjs[i] = (ParticleSystem) Instantiate(particleEffect, t, Quaternion.identity);
         }
     }
 

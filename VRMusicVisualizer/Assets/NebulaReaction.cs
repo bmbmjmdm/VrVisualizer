@@ -29,7 +29,7 @@ public class NebulaReaction : MonoBehaviour
         BeatCollector.registerVerseListener(toggleActive);
         if (active) CreateObjs(false);
         else {
-            realObjs = new GameObject[numNebuli];
+            realObjs = null;
             destroyed = true;
         }
     }
@@ -41,21 +41,27 @@ public class NebulaReaction : MonoBehaviour
             // exclusive so dont have to do Length-1
             int ran = UnityEngine.Random.Range(0, nebuli.Length);
             GameObject prefab = nebuli[ran];
-            Transform t = new GameObject().transform;
+            Vector3 t = new Vector3();
+            Quaternion q = new Quaternion(
+                Quaternion.identity.x,
+                Quaternion.identity.y,
+                Quaternion.identity.z,
+                Quaternion.identity.w
+            );
+            q.eulerAngles = new Vector3(
+                UnityEngine.Random.Range(0.0f, 360.0f),
+                UnityEngine.Random.Range(0.0f, 360.0f),
+                UnityEngine.Random.Range(0.0f, 360.0f)
+            );
             // create nebuli all around the player, randomly between -300 and 300 on every axis
             do {
-                t.position += Vector3.up * UnityEngine.Random.Range(-300.0f, 300.0f);
-                t.position += Vector3.right * UnityEngine.Random.Range(-300.0f, 300.0f);
-                t.position += Vector3.forward * UnityEngine.Random.Range(-300.0f, 300.0f);
-                t.eulerAngles = new Vector3(
-                    UnityEngine.Random.Range(0.0f, 360.0f),
-                    UnityEngine.Random.Range(0.0f, 360.0f),
-                    UnityEngine.Random.Range(0.0f, 360.0f)
-                );
+                t += Vector3.up * UnityEngine.Random.Range(-300.0f, 300.0f);
+                t += Vector3.right * UnityEngine.Random.Range(-300.0f, 300.0f);
+                t += Vector3.forward * UnityEngine.Random.Range(-300.0f, 300.0f);
             }
             // however dont let them spawn too close to the player
-            while (Utilities.isNearPlayer(t.position));
-            realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+            while (Utilities.isNearPlayer(t));
+            realObjs[i] = (GameObject) Instantiate(prefab, t, q);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);
@@ -78,6 +84,7 @@ public class NebulaReaction : MonoBehaviour
                     // we're done destroying
                     destroyed = true;
                     DestroyPool();
+                    realObjs = null;
                 }
             }
         }
@@ -87,7 +94,7 @@ public class NebulaReaction : MonoBehaviour
             // if any of them aren't done fading in, dont proceed
             if (destroyed) {
                 // if this is our first iteration after being destroyed, instantiate all objects
-                if (realObjs[0] == null) CreateObjs(true);
+                if (realObjs == null) CreateObjs(true);
                 // we're still growing
                 Boolean isFull = !Utilities.fadeInObjects(realObjs, originalScales, ref fadeOutClock, Time.deltaTime);
                 if (isFull) {
@@ -185,8 +192,8 @@ public class NebulaReaction : MonoBehaviour
             }
         }
         // uh oh, we got through all our colors and couldn't find a usable stage instance. let's add a new one
-        Transform t = new GameObject().transform;
-        GameObject newObj = (GameObject) Instantiate(nebuli[color], t.position, t.rotation);
+        Vector3 t = new Vector3();
+        GameObject newObj = (GameObject) Instantiate(nebuli[color], t, Quaternion.identity);
         colorList.Add(newObj);
         newObj.SetActive(true);
         return newObj;

@@ -44,11 +44,11 @@ public class FlowerReaction : MonoBehaviour
             // exclusive so dont have to do Length-1
             int ran = UnityEngine.Random.Range(0, flowers.Length);
             GameObject prefab = flowers[ran];
-            Transform t = new GameObject().transform;
-            t.position = new Vector3(0f, 0f, 0f);
-            t.position += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
-            t.position += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
-            realObjs[i] = (GameObject) Instantiate(prefab, t.position, t.rotation);
+            Vector3 t = new Vector3();
+            t = new Vector3(0f, 0f, 0f);
+            t += Vector3.right * UnityEngine.Random.Range(-150.0f, 150.0f);
+            t += Vector3.forward * UnityEngine.Random.Range(-150.0f, 150.0f);
+            realObjs[i] = (GameObject) Instantiate(prefab, t, Quaternion.identity);
             // if we're starting small, set the size to 0 so we can fade in
             if (small){
                 realObjs[i].transform.localScale = new Vector3(0,0,0);

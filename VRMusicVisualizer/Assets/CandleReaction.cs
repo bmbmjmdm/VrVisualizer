@@ -53,8 +53,7 @@ public class CandleReaction : MonoBehaviour
         // goes through entire array and fill it with random prefabs/inactive objects
         for (int i = 0; i < numCandles; i++) {
             int candleIndex = UnityEngine.Random.Range(0, candles.Length);
-            Transform t = new GameObject().transform;
-            realObjs[i] = (GameObject) Instantiate(candles[candleIndex], t.position, t.rotation);
+            realObjs[i] = (GameObject) Instantiate(candles[candleIndex], new Vector3(), Quaternion.identity);
             realObjs[i].SetActive(false);
         }
     }
@@ -81,11 +80,11 @@ public class CandleReaction : MonoBehaviour
             // activate all necessary candles at random locations
             else {
                 if (!realObjs[i].activeInHierarchy) {
-                    Transform t = new GameObject().transform;
-                    t.position += Vector3.up * UnityEngine.Random.Range(-100.0f, -10.0f);
-                    t.position += Vector3.right * UnityEngine.Random.Range(-100.0f, 100.0f);
-                    t.position += Vector3.forward * UnityEngine.Random.Range(-100.0f, 100.0f);
-                    realObjs[i].transform.position = t.position;
+                    Vector3 t = new Vector3();
+                    t += Vector3.up * UnityEngine.Random.Range(-100.0f, -10.0f);
+                    t += Vector3.right * UnityEngine.Random.Range(-100.0f, 100.0f);
+                    t += Vector3.forward * UnityEngine.Random.Range(-100.0f, 100.0f);
+                    realObjs[i].transform.position = t;
                     realObjs[i].SetActive(true);
                 }
             }

@@ -20,7 +20,7 @@ public class laser_movement : MonoBehaviour {
     if (clock >= 0.02) {
       clock = 0f;
 			// fly towards target and then self-destruct
-			if (Vector3.Distance (gameObject.transform.position, target) <= 0.1f) {
+			if (Vector3.Distance (gameObject.transform.position, target) <= 1f) {
 				Destroy(gameObject);
 			}
 			else {
@@ -34,7 +34,7 @@ public class laser_movement : MonoBehaviour {
     zDir = y;
     yDir = z;
 		// pick destination
-		target = new Vector3(gameObject.transform.position.x + 30f*xDir, gameObject.transform.position.y + 30f*yDir, gameObject.transform.position.z + 30f*zDir);
+		target = new Vector3(gameObject.transform.position.x + 240f*xDir, gameObject.transform.position.y + 240f*yDir, gameObject.transform.position.z + 240f*zDir);
     // turn to face destination
 		Vector3 vectorDirectionToTarget = (target-gameObject.transform.position).normalized;
 		Quaternion finalRotation = Quaternion.LookRotation(vectorDirectionToTarget);
