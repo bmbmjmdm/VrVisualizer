@@ -43,7 +43,10 @@ public class CandleReaction : MonoBehaviour
             // dont change num candles if it only changed by a tiny tiny bit. this gets rid of jitters 
             if (clock >= 0.02 && BeatCollector.highSig) {
                 clock = 0f;
-                spawnCandles(BeatCollector.getHighPer());
+                // round to nearest 10%
+                decimal dec = new decimal(BeatCollector.getHighPer());
+                double d = (double) dec;
+                spawnCandles((float) Math.Round(d, 1));
             }
         }
     }

@@ -19,6 +19,7 @@ public class IntroScript : MonoBehaviour
     private Hand handLeft; 
     private Hand handRight;
     private bool doneIntro = false;
+    private string controller_type = "wmr_holographic";
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,40 @@ public class IntroScript : MonoBehaviour
       handLeft = (Hand) GameObject.Find("LeftHand").GetComponent<Hand>();
       handRight = (Hand) GameObject.Find("RightHand").GetComponent<Hand>();
       BeatCollector.registerBeatListener(recieveBeat);
+      
+      // MY OWN CUSTOM CODE TO FIND THE CONTROLLER MODEL
+      var system = OpenVR.System;
+      string[] valid_controllers = {"knuckles", "oculus_touch", "vive_cosmos_controller", "vive_controller"};
+      for (int i = 0; i < 100; i++) {
+        var error = ETrackedPropertyError.TrackedProp_Success;
+        var capacity = system.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_ExpectedControllerType_String, null, 0, ref error);
+        if (capacity > 1)
+        {
+            var buffer = new System.Text.StringBuilder((int)capacity);
+            system.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_ExpectedControllerType_String, buffer, capacity, ref error);
+            try {
+              var s = buffer.ToString();
+              if (((IList)valid_controllers).Contains(s)) {
+                controller_type = s;
+              }
+            }
+            catch {
+              // ignore errors
+            }
+        }
+      }
+      if (controller_type == "knuckles") {
+
+      }
+      else if (controller_type == "oculus_touch" || controller_type == "vive_cosmos_controller") {
+Debug.Log("it worked!")        ;
+      }
+      else if (controller_type == "vive_controller" || controller_type == "wmr_holographic") {
+        
+      }
+      else {
+        //unsupported
+      }
     }
 
     // Update is called once per frame

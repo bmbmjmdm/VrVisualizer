@@ -1,93 +1,5 @@
 {
   "bindings": {
-    "/actions/buggy": {
-      "chords": [],
-      "poses": [],
-      "haptics": [],
-      "sources": [
-        {
-          "path": "/user/hand/left/input/thumbstick",
-          "mode": "joystick",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/buggy/in/steering"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/thumbstick",
-          "mode": "joystick",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/buggy/in/steering"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/trigger",
-          "mode": "trigger",
-          "parameters": {},
-          "inputs": {
-            "pull": {
-              "output": "/actions/buggy/in/throttle"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/trigger",
-          "mode": "trigger",
-          "parameters": {},
-          "inputs": {
-            "pull": {
-              "output": "/actions/buggy/in/throttle"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/a",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/buggy/in/brake"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/a",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/buggy/in/brake"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/b",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/buggy/in/reset"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/b",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/buggy/in/reset"
-            }
-          }
-        }
-      ],
-      "skeleton": []
-    },
     "/actions/default": {
       "chords": [],
       "poses": [
@@ -108,27 +20,7 @@
           "parameters": {},
           "inputs": {
             "click": {
-              "output": "/actions/default/in/interactui"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/grip",
-          "mode": "force_sensor",
-          "parameters": {},
-          "inputs": {
-            "force": {
-              "output": "/actions/default/in/squeeze"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/grip",
-          "mode": "force_sensor",
-          "parameters": {},
-          "inputs": {
-            "force": {
-              "output": "/actions/default/in/squeeze"
+              "output": "/actions/default/in/nextscene"
             }
           }
         },
@@ -148,7 +40,7 @@
           "parameters": {},
           "inputs": {
             "click": {
-              "output": "/actions/default/in/interactui"
+              "output": "/actions/default/in/nextscene"
             }
           }
         },
@@ -225,54 +117,62 @@
           }
         },
         {
-          "path": "/user/hand/left/input/grip",
-          "mode": "grab",
-          "parameters": {
-            "force_hold_threshold": "0.02",
-            "force_release_threshold": "0.01"
-          },
+          "path": "/user/hand/left/input/b",
+          "mode": "button",
+          "parameters": {},
           "inputs": {
-            "grab": {
-              "output": "/actions/default/in/grabgrip"
+            "click": {
+              "output": "/actions/default/in/cycledeleteeffect"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/default/in/makebeat"
             }
           }
         },
         {
           "path": "/user/hand/right/input/grip",
-          "mode": "grab",
-          "parameters": {
-            "force_hold_threshold": "0.02",
-            "force_release_threshold": "0.01"
-          },
+          "mode": "button",
+          "parameters": {},
           "inputs": {
-            "grab": {
-              "output": "/actions/default/in/grabgrip"
+            "click": {
+              "output": "/actions/default/in/makebeat"
             }
           }
         },
         {
-          "path": "/user/hand/left/input/pinch",
-          "mode": "grab",
-          "parameters": {
-            "force_hold_threshold": "0.02",
-            "force_release_threshold": "0.01"
-          },
+          "path": "/user/hand/left/input/a",
+          "mode": "button",
+          "parameters": {},
           "inputs": {
-            "grab": {
-              "output": "/actions/default/in/grabpinch"
+            "click": {
+              "output": "/actions/default/in/confirmdeleteeffect"
             }
           }
         },
         {
-          "path": "/user/hand/right/input/pinch",
-          "mode": "grab",
-          "parameters": {
-            "force_hold_threshold": "0.02",
-            "force_release_threshold": "0.01"
-          },
+          "path": "/user/hand/right/input/b",
+          "mode": "button",
+          "parameters": {},
           "inputs": {
-            "grab": {
-              "output": "/actions/default/in/grabpinch"
+            "click": {
+              "output": "/actions/default/in/cycleaddeffect"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/a",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/default/in/confirmaddeffect"
             }
           }
         }
@@ -287,54 +187,6 @@
           "path": "/user/hand/right/input/skeleton/right"
         }
       ]
-    },
-    "/actions/platformer": {
-      "chords": [],
-      "poses": [],
-      "haptics": [],
-      "sources": [
-        {
-          "path": "/user/hand/left/input/thumbstick",
-          "mode": "joystick",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/platformer/in/move"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/thumbstick",
-          "mode": "joystick",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/platformer/in/move"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/trigger",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/platformer/in/jump"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/trigger",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/platformer/in/jump"
-            }
-          }
-        }
-      ],
-      "skeleton": []
     }
   },
   "controller_type": "knuckles",
