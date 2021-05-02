@@ -1,0 +1,220 @@
+
+
+[2020-12-21 18:56:17] Startup - updater built Jun  8 2020 17:15:58
+[2020-12-21 18:56:17] Checking for update on startup
+[2020-12-21 18:56:17] Checking for available update...
+[2020-12-21 18:56:17] Downloading manifest: client-download.steampowered.com/client/steam_cmd_win32
+[2020-12-21 18:56:18] Package file steamcmd_public_all.zip.e61ce36efab3810390b5b5f55ee433f1fc7a04af missing or incorrect size
+[2020-12-21 18:56:18] Package file steamcmd_bins_win32.zip.vz.f876f230f0026a5323d5aeaeab1b551322924b8c_5386802 missing or incorrect size
+[2020-12-21 18:56:18] Package file steamcmd_steamservice_win32.zip.vz.c31993ae569024263affcf0f6af435683d57c9c1_1157875 missing or incorrect size
+[2020-12-21 18:56:18] Package file steamcmd_steamerrorreporter_win32.zip.e208f6a45bd35d3bde3f24570322d47f6a1123ef missing or incorrect size
+[2020-12-21 18:56:18] Package file steamcmd_siteserverui_win32.zip.vz.6f2ca69732fc37b109f0693221800c83a885ad9b_33234818 missing or incorrect size
+[2020-12-21 18:56:18] Package file steamcmd_win32.zip.vz.1a603cb0fc3c8b281b208d225af9e1e2d8a09026_1211164 missing or incorrect size
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_public_all.zip.e61ce36efab3810390b5b5f55ee433f1fc7a04af
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_bins_win32.zip.vz.f876f230f0026a5323d5aeaeab1b551322924b8c_5386802
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_steamservice_win32.zip.vz.c31993ae569024263affcf0f6af435683d57c9c1_1157875
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_steamerrorreporter_win32.zip.e208f6a45bd35d3bde3f24570322d47f6a1123ef
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_siteserverui_win32.zip.vz.6f2ca69732fc37b109f0693221800c83a885ad9b_33234818
+[2020-12-21 18:56:18] Add pending download: media4.steampowered.com/client/steamcmd_win32.zip.vz.1a603cb0fc3c8b281b208d225af9e1e2d8a09026_1211164
+[2020-12-21 18:56:18] Downloading update (785 of 40,252 KB)...
+[2020-12-21 18:56:18] Downloading update (4,746 of 40,252 KB)...
+[2020-12-21 18:56:19] Downloading update (8,551 of 40,252 KB)...
+[2020-12-21 18:56:19] Downloading update (12,262 of 40,252 KB)...
+[2020-12-21 18:56:19] Downloading update (15,628 of 40,252 KB)...
+[2020-12-21 18:56:19] Downloading update (19,320 of 40,252 KB)...
+[2020-12-21 18:56:20] Downloading update (22,666 of 40,252 KB)...
+[2020-12-21 18:56:20] Downloading update (26,353 of 40,252 KB)...
+[2020-12-21 18:56:20] Downloading update (30,069 of 40,252 KB)...
+[2020-12-21 18:56:20] Downloading update (33,783 of 40,252 KB)...
+[2020-12-21 18:56:21] Downloading update (37,475 of 40,252 KB)...
+[2020-12-21 18:56:21] Downloading update (40,252 of 40,252 KB)...
+[2020-12-21 18:56:21] Download Complete.
+[2020-12-21 18:56:21] uninstalled manifest found in C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_win32 (1).
+[2020-12-21 18:56:21] Found pending update
+[2020-12-21 18:56:21] Applying update...
+[2020-12-21 18:56:21] Extracting package...
+[2020-12-21 18:56:25] Installing update...
+[2020-12-21 18:56:25] Committing NTFS transaction (0 non-transactional backup files)
+[2020-12-21 18:56:25] Cleaning up...
+[2020-12-21 18:56:25] Update complete, launching...
+[2020-12-21 18:56:25] Shutdown
+
+
+[2020-12-21 18:56:26] Startup - updater built Dec 15 2020 16:26:39
+[2020-12-21 18:56:26] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2020-12-21 18:56:26] Using the following download hosts for Public, Realm steamglobal
+[2020-12-21 18:56:26] 1. http://client-download.steampowered.com, /client/, Realm 'steamglobal', weight was 100, source = 'baked in'
+[2020-12-21 18:56:26] 2. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2020-12-21 18:56:26] Checking for update on startup
+[2020-12-21 18:56:26] Checking for available updates...
+[2020-12-21 18:56:26] Downloading manifest: http://client-download.steampowered.com/client/steam_cmd_win32
+[2020-12-21 18:56:27] Download skipped: /client/steam_cmd_win32 version 1608080012, installed version 1608080012, downloaded version 0
+[2020-12-21 18:56:27] Nothing to do
+[2020-12-21 18:56:27] Verifying installation...
+[2020-12-21 18:56:27] Performing checksum verification of executable files
+[2020-12-21 18:56:28] Verification complete
+[2020-12-21 18:56:30] Shutdown
+
+
+[2020-12-21 19:21:32] Startup - updater built Dec 15 2020 16:26:39
+[2020-12-21 19:21:32] Failed to load cached hosts file (File 'update_hosts_cached.vdf' not found), using defaults
+[2020-12-21 19:21:32] Using the following download hosts for Public, Realm steamglobal
+[2020-12-21 19:21:32] 1. http://client-download.steampowered.com, /client/, Realm 'steamglobal', weight was 100, source = 'baked in'
+[2020-12-21 19:21:32] 2. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2020-12-21 19:21:32] Checking for update on startup
+[2020-12-21 19:21:32] Checking for available updates...
+[2020-12-21 19:21:32] Downloading manifest: http://client-download.steampowered.com/client/steam_cmd_win32
+[2020-12-21 19:21:33] Download skipped: /client/steam_cmd_win32 version 1608080012, installed version 1608080012, downloaded version 0
+[2020-12-21 19:21:33] Nothing to do
+[2020-12-21 19:21:33] Verifying installation...
+[2020-12-21 19:21:33] Performing checksum verification of executable files
+[2020-12-21 19:21:33] Verification complete
+
+
+[2021-03-13 13:19:58] Startup - updater built Dec 15 2020 16:26:39
+[2021-03-13 13:19:58] Using the following download hosts for Public, Realm steamglobal
+[2021-03-13 13:19:58] 1. http://media4.steampowered.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-13 13:19:58] Checking for update on startup
+[2021-03-13 13:19:58] Checking for available updates...
+[2021-03-13 13:19:58] Downloading manifest: http://media4.steampowered.com/client/steam_cmd_win32
+[2021-03-13 13:20:20] Download failed: http error 0 (media4.steampowered.com/client/steam_cmd_win32)
+[2021-03-13 13:20:20] DownloadManifest - exhausted list of download hosts
+[2021-03-13 13:20:20] failed to load manifest from buffer.
+[2021-03-13 13:20:20] Failed to load manifest
+[2021-03-13 13:20:20] Error: Download failed: http error 0
+[2021-03-13 13:20:20] Saving metrics to disk (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+[2021-03-13 13:20:20] Error: Failed to determine download location for universe 1
+[2021-03-13 13:20:20] Verifying installation...
+[2021-03-13 13:20:20] Performing checksum verification of executable files
+[2021-03-13 13:20:21] Verification complete
+[2021-03-13 13:20:40] Clearing cached metrics (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+
+
+[2021-03-21 16:27:43] Startup - updater built Dec 15 2020 16:26:39
+[2021-03-21 16:27:43] Using the following download hosts for Public, Realm steamglobal
+[2021-03-21 16:27:43] 1. https://cdn.akamai.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:27:43] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:27:43] Checking for update on startup
+[2021-03-21 16:27:44] Checking for available updates...
+[2021-03-21 16:27:44] Downloading manifest: https://cdn.akamai.steamstatic.com/client/steam_cmd_win32
+[2021-03-21 16:27:44] Package file steamcmd_bins_win32.zip.vz.4a9716916d4ba378cf7379fd758f58f6e60d4c8b_5396939 missing or incorrect size
+[2021-03-21 16:27:44] Package file steamcmd_steamservice_win32.zip.vz.f1447a51b3038225890278007f64cea3d857a700_1159033 missing or incorrect size
+[2021-03-21 16:27:44] Package file steamcmd_steamerrorreporter_win32.zip.cf66ff900ae41d28ae07992e35599061f17b6805 missing or incorrect size
+[2021-03-21 16:27:44] Package file steamcmd_win32.zip.vz.36af119450d3dbac534d1dfefde57e1b31f5eee4_1211195 missing or incorrect size
+[2021-03-21 16:27:44] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_bins_win32.zip.vz.4a9716916d4ba378cf7379fd758f58f6e60d4c8b_5396939
+[2021-03-21 16:27:44] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_steamservice_win32.zip.vz.f1447a51b3038225890278007f64cea3d857a700_1159033
+[2021-03-21 16:27:44] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_steamerrorreporter_win32.zip.cf66ff900ae41d28ae07992e35599061f17b6805
+[2021-03-21 16:27:44] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_win32.zip.vz.36af119450d3dbac534d1dfefde57e1b31f5eee4_1211195
+[2021-03-21 16:27:44] Downloading update (0 of 7,759 KB)...
+[2021-03-21 16:27:44] Downloading update (2,590 of 7,759 KB)...
+[2021-03-21 16:27:45] Downloading update (6,598 of 7,759 KB)...
+[2021-03-21 16:27:45] Downloading update (7,759 of 7,759 KB)...
+[2021-03-21 16:27:45] Download complete.
+[2021-03-21 16:27:45] Saving metrics to disk (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+[2021-03-21 16:27:45] uninstalled manifest found in C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_win32 (1).
+[2021-03-21 16:27:45] Found pending update
+[2021-03-21 16:27:45] Installing update...
+[2021-03-21 16:27:45] Extracting package...
+[2021-03-21 16:27:47] Installing update...
+[2021-03-21 16:27:47] Committing NTFS transaction (0 non-transactional backup files)
+[2021-03-21 16:27:47] Cleaning up...
+[2021-03-21 16:27:47] Update complete, launching Steamcmd...
+[2021-03-21 16:27:47] Shutdown
+
+
+[2021-03-21 16:27:48] Startup - updater built Feb 12 2021 15:23:01
+[2021-03-21 16:27:48] Loading cached metrics from disk (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+[2021-03-21 16:27:48] Using the following download hosts for Public, Realm steamglobal
+[2021-03-21 16:27:48] 1. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:27:48] 2. https://cdn.akamai.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:27:48] 3. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2021-03-21 16:27:48] Checking for update on startup
+[2021-03-21 16:27:48] Checking for available updates...
+[2021-03-21 16:27:48] Downloading manifest: https://cdn.cloudflare.steamstatic.com/client/steam_cmd_win32
+[2021-03-21 16:27:48] Download skipped: /client/steam_cmd_win32 version 1613176656, installed version 1613176656, downloaded version 0
+[2021-03-21 16:27:48] Nothing to do
+[2021-03-21 16:27:48] Verifying installation...
+[2021-03-21 16:27:48] Performing checksum verification of executable files
+[2021-03-21 16:27:49] Verification complete
+[2021-03-21 16:27:59] Clearing cached metrics (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+
+
+[2021-03-21 16:46:50] Startup - updater built Feb 12 2021 15:23:01
+[2021-03-21 16:46:50] Using the following download hosts for Public, Realm steamglobal
+[2021-03-21 16:46:50] 1. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:46:50] 2. https://cdn.akamai.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-03-21 16:46:50] 3. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2021-03-21 16:46:50] Checking for update on startup
+[2021-03-21 16:46:50] Checking for available updates...
+[2021-03-21 16:46:50] Downloading manifest: https://cdn.cloudflare.steamstatic.com/client/steam_cmd_win32
+[2021-03-21 16:46:51] Download skipped: /client/steam_cmd_win32 version 1613176656, installed version 1613176656, downloaded version 0
+[2021-03-21 16:46:51] Nothing to do
+[2021-03-21 16:46:51] Verifying installation...
+[2021-03-21 16:46:51] Performing checksum verification of executable files
+[2021-03-21 16:46:51] Verification complete
+
+
+[2021-05-01 14:36:27] Startup - updater built Feb 12 2021 15:23:01
+[2021-05-01 14:36:27] Using the following download hosts for Public, Realm steamglobal
+[2021-05-01 14:36:27] 1. https://cdn.akamai.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-05-01 14:36:27] 2. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-05-01 14:36:27] 3. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2021-05-01 14:36:27] Checking for update on startup
+[2021-05-01 14:36:27] Checking for available updates...
+[2021-05-01 14:36:27] Downloading manifest: https://cdn.akamai.steamstatic.com/client/steam_cmd_win32
+[2021-05-01 14:36:28] Package file steamcmd_public_all.zip.79f4c75f1e17a875f69e001eb12fae567200c632 missing or incorrect size
+[2021-05-01 14:36:28] Package file steamcmd_bins_win32.zip.vz.a827aa19eeb92798501f98e83a120262fa5c35e3_5957083 missing or incorrect size
+[2021-05-01 14:36:28] Package file steamcmd_steamservice_win32.zip.vz.deee2e0d32764847a848b9c725f91c663f6ed09f_1584633 missing or incorrect size
+[2021-05-01 14:36:28] Package file steamcmd_steamerrorreporter_win32.zip.524be51497d3b5b0c9f91bf330b967c58cde8dbe missing or incorrect size
+[2021-05-01 14:36:28] Package file steamcmd_siteserverui_win32.zip.vz.304db6bb230e45ee3d1e1011636d27ed681518c6_33272256 missing or incorrect size
+[2021-05-01 14:36:28] Package file steamcmd_win32.zip.vz.d712fcbf8ff401200b1e80b671b8e187bf4b26ef_1589828 missing or incorrect size
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_public_all.zip.79f4c75f1e17a875f69e001eb12fae567200c632
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_bins_win32.zip.vz.a827aa19eeb92798501f98e83a120262fa5c35e3_5957083
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_steamservice_win32.zip.vz.deee2e0d32764847a848b9c725f91c663f6ed09f_1584633
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_steamerrorreporter_win32.zip.524be51497d3b5b0c9f91bf330b967c58cde8dbe
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_siteserverui_win32.zip.vz.304db6bb230e45ee3d1e1011636d27ed681518c6_33272256
+[2021-05-01 14:36:28] Add pending download: https://cdn.akamai.steamstatic.com/client/steamcmd_win32.zip.vz.d712fcbf8ff401200b1e80b671b8e187bf4b26ef_1589828
+[2021-05-01 14:36:28] Downloading update (48 of 41,632 KB)...
+[2021-05-01 14:36:28] Downloading update (2,113 of 41,632 KB)...
+[2021-05-01 14:36:29] Downloading update (5,143 of 41,632 KB)...
+[2021-05-01 14:36:29] Downloading update (8,162 of 41,632 KB)...
+[2021-05-01 14:36:29] Downloading update (11,339 of 41,632 KB)...
+[2021-05-01 14:36:29] Downloading update (14,003 of 41,632 KB)...
+[2021-05-01 14:36:30] Downloading update (16,971 of 41,632 KB)...
+[2021-05-01 14:36:30] Downloading update (20,208 of 41,632 KB)...
+[2021-05-01 14:36:30] Downloading update (23,318 of 41,632 KB)...
+[2021-05-01 14:36:30] Downloading update (26,125 of 41,632 KB)...
+[2021-05-01 14:36:31] Downloading update (28,897 of 41,632 KB)...
+[2021-05-01 14:36:31] Downloading update (31,808 of 41,632 KB)...
+[2021-05-01 14:36:31] Downloading update (34,751 of 41,632 KB)...
+[2021-05-01 14:36:31] Downloading update (37,228 of 41,632 KB)...
+[2021-05-01 14:36:32] Downloading update (40,131 of 41,632 KB)...
+[2021-05-01 14:36:32] Downloading update (41,632 of 41,632 KB)...
+[2021-05-01 14:36:32] Download complete.
+[2021-05-01 14:36:32] Saving metrics to disk (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+[2021-05-01 14:36:32] uninstalled manifest found in C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_win32 (1).
+[2021-05-01 14:36:32] Found pending update
+[2021-05-01 14:36:32] Installing update...
+[2021-05-01 14:36:32] Extracting package...
+[2021-05-01 14:36:34] Installing update...
+[2021-05-01 14:36:34] Committing NTFS transaction (0 non-transactional backup files)
+[2021-05-01 14:36:34] Cleaning up...
+[2021-05-01 14:36:34] Update complete, launching Steamcmd...
+[2021-05-01 14:36:34] Shutdown
+
+
+[2021-05-01 14:36:35] Startup - updater built Apr 12 2021 11:53:00
+[2021-05-01 14:36:35] Loading cached metrics from disk (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)
+[2021-05-01 14:36:35] Using the following download hosts for Public, Realm steamglobal
+[2021-05-01 14:36:35] 1. https://cdn.cloudflare.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-05-01 14:36:35] 2. https://cdn.akamai.steamstatic.com, /client/, Realm 'steamglobal', weight was 100, source = 'update_hosts_cached.vdf'
+[2021-05-01 14:36:35] 3. http://media.steampowered.com, /client/, Realm 'steamglobal', weight was 1, source = 'baked in'
+[2021-05-01 14:36:35] Checking for update on startup
+[2021-05-01 14:36:35] Checking for available updates...
+[2021-05-01 14:36:35] Downloading manifest: https://cdn.cloudflare.steamstatic.com/client/steam_cmd_win32
+[2021-05-01 14:36:35] Download skipped: /client/steam_cmd_win32 version 1618256708, installed version 1618256708, existing pending version 0
+[2021-05-01 14:36:35] Nothing to do
+[2021-05-01 14:36:35] Verifying installation...
+[2021-05-01 14:36:35] Performing checksum verification of executable files
+[2021-05-01 14:36:36] Verification complete
+[2021-05-01 14:36:47] Clearing cached metrics (C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\package\steam_cmd_metrics.bin)

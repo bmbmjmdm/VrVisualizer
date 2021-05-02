@@ -1,0 +1,364 @@
+
+
+[2020-12-21 18:56:28] Log session started
+[2020-12-21 18:56:28] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 18:56:28] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 18:56:28] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 18:56:28] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 18:56:28] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 18:56:28] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 18:56:28] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f008:100::a2fe:c787]:80 ([2602:801:f008:100::a2fe:c787]:80)) - SUCCESS
+[2020-12-21 18:56:28] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f008:100::a2fe:c787]:80 ([2602:801:f008:100::a2fe:c787]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 18:56:28] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f007:100::a2fe:c10c]:27019) - SUCCESS
+[2020-12-21 18:56:28] [0,0] Server says 0% of connections should be websockets, we rolled 35 - using UDP as default.
+[2020-12-21 18:56:28] CCMInterface::YieldingConnect -- no CMs cached locally, calling ISteamDirectory/GetCMList web api for launcher type 'steamcmd'. . .
+[2020-12-21 18:56:28] CCMInterface::YieldingConnect -- got 100 CMs and 100 WebSocket CMS from ISteamDirectory/GetCMList.
+[2020-12-21 18:56:28] [1,2] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.71:27022, UDP)
+[2020-12-21 18:56:29] [1,2] ConnectionCompleted() (162.254.195.87:27024, UDP)
+[2020-12-21 18:56:29] [1,2] RecvMsgClientLogOnResponse() : [I:0:0] 'Invalid Password'
+[2020-12-21 18:56:29] [1,2] AsyncDisconnect()
+[2020-12-21 18:56:29] [0,0] ConnectionDisconnected('Disconnected By Remote Host') : 'Invalid Password' (162.254.195.87:27024, UDP)
+[2020-12-21 18:56:29] [0,0] ConnectionDisconnected() not auto reconnecting due to eResultLogonSession specifies no reconnect
+[2020-12-21 18:56:29] [0,0] ResetVoiceRecording() (was recording: 0) (last get voice time: 1608602189 seconds ago)
+[2020-12-21 18:56:29] [0,0] Log session ended
+
+
+[2020-12-21 19:21:33] Log session started
+[2020-12-21 19:21:33] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 19:21:33] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 19:21:33] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 19:21:33] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2020-12-21 19:21:33] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:102::a2fe:c32b]:80 ([2602:801:f006:102::a2fe:c32b]:80)) - SUCCESS
+[2020-12-21 19:21:33] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:102::a2fe:c32b]:80 ([2602:801:f006:102::a2fe:c32b]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 19:21:33] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f006:100::a2fe:c30c]:27019) - SUCCESS
+[2020-12-21 19:22:39] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 19:22:39] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 19:22:39] [0,0] Server says 0% of connections should be websockets, we rolled 76 - using UDP as default.
+[2020-12-21 19:22:39] CCMInterface::YieldingConnect -- no CMs cached locally, calling ISteamDirectory/GetCMList web api for launcher type 'steamcmd'. . .
+[2020-12-21 19:22:39] CCMInterface::YieldingConnect -- got 100 CMs and 100 WebSocket CMS from ISteamDirectory/GetCMList.
+[2020-12-21 19:22:39] [1,2] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.87:27023, UDP)
+[2020-12-21 19:22:40] [1,2] ConnectionCompleted() (162.254.195.87:27020, UDP)
+[2020-12-21 19:22:40] [1,2] RecvMsgClientLogOnResponse() : [I:0:0] 'Account Logon Denied'
+[2020-12-21 19:22:40] [1,2] AsyncDisconnect()
+[2020-12-21 19:22:40] [0,0] ConnectionDisconnected('Disconnected By Remote Host') : 'Account Logon Denied' (162.254.195.87:27020, UDP)
+[2020-12-21 19:22:40] [0,0] ConnectionDisconnected() not auto reconnecting due to eResultLogonSession specifies no reconnect
+[2020-12-21 19:22:59] [0,0] SetSteamID( [U:1:0] )
+[2020-12-21 19:22:59] [0,0] Server says 0% of connections should be websockets, we rolled 96 - using UDP as default.
+[2020-12-21 19:22:59] [1,10] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.87:27023, UDP)
+[2020-12-21 19:23:00] [1,10] ConnectionCompleted() (162.254.195.82:27019, UDP)
+[2020-12-21 19:23:00] [1,10] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2020-12-21 19:23:00] CClientJobGetClientUpdateHosts: failed to load, 'File 'update_hosts_cached.vdf' not found'
+[2020-12-21 19:23:00] CClientJobGetClientUpdateHosts: received update from server
+[2020-12-21 19:23:00] CClientJobGetClientUpdateHosts: cached copy new expiration: Thu Dec 24 08:31:30 2020
+[2020-12-21 19:46:32] [0,0] ConnectionDisconnected('I/O Operation Failed') : 'OK' (162.254.195.82:27019, UDP)
+[2020-12-21 19:46:32] [0,0] StartAutoReconnect() will start in 0 seconds
+[2020-12-21 19:46:32] [0,0] Server says 50% of connections should be websockets, we rolled 15 - using WebSockets as default.
+[2020-12-21 19:46:32] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) starting...
+[2020-12-21 19:46:32] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27037) starting...
+[2020-12-21 19:46:32] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27031) starting...
+[2020-12-21 19:46:32] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:443) starting...
+[2020-12-21 19:46:32] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c00c]:80 ([2602:801:f002:101::a2fe:c00c]:80)) - SUCCESS
+[2020-12-21 19:46:32] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c00c]:80 ([2602:801:f002:101::a2fe:c00c]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 19:46:32] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f006:100::a2fe:c30e]:27019) - SUCCESS
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27031) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27037) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27031) starting...
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27030) starting...
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:443) starting...
+[2020-12-21 19:46:33] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:443) starting...
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27030) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27031) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27039) starting...
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27038) starting...
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27039) starting...
+[2020-12-21 19:46:34] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27035) starting...
+[2020-12-21 19:46:35] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:35] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:35] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27038) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:35] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:35] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27029) starting...
+[2020-12-21 19:46:36] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27029) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:46:36] [1,3] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27033, WebSocket)
+[2020-12-21 19:46:57] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 19:46:57] [0,0] StartAutoReconnect() will start in 3 seconds
+[2020-12-21 19:46:57] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c00c]:80 ([2602:801:f002:101::a2fe:c00c]:80)) - SUCCESS
+[2020-12-21 19:46:57] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c00c]:80 ([2602:801:f002:101::a2fe:c00c]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 19:46:57] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f006:100::a2fe:c30d]:27019) - SUCCESS
+[2020-12-21 19:47:00] [0,0] Server says 50% of connections should be websockets, we rolled 42 - using WebSockets as default.
+[2020-12-21 19:47:00] [0,0] Existing WebSocket ping data (cm6-lax1.cm.steampowered.com:27030) results: 100000.0000ms + load 0.0000 (26 seconds ago)
+[2020-12-21 19:47:00] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) starting...
+[2020-12-21 19:47:00] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:27024) starting...
+[2020-12-21 19:47:00] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27031) starting...
+[2020-12-21 19:47:00] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27023) starting...
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27023) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27031) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:27024) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27039) starting...
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27036) starting...
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27032) starting...
+[2020-12-21 19:47:01] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27024) starting...
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27024) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27036) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm5-iad1.cm.steampowered.com:27032) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:443) starting...
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27033) starting...
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27039) starting...
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm2-lax1.cm.steampowered.com:27020) starting...
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:02] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27030) starting...
+[2020-12-21 19:47:03] [0,0] PingWebSocketCM() (cm2-lax1.cm.steampowered.com:27020) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:03] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:03] [0,0] PingWebSocketCM() (cm6-iad1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:03] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27030) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 19:47:03] [1,7] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27033, WebSocket)
+[2020-12-21 19:47:38] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 19:47:38] [0,0] StartAutoReconnect() will start in 6 seconds
+[2020-12-21 19:47:39] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:100::a2fe:c30e]:80 ([2602:801:f006:100::a2fe:c30e]:80)) - SUCCESS
+[2020-12-21 19:47:39] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:100::a2fe:c30e]:80 ([2602:801:f006:100::a2fe:c30e]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 19:47:39] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f006:102::a2fe:c324]:27019) - SUCCESS
+[2020-12-21 19:47:44] [0,0] Server says 50% of connections should be websockets, we rolled 91 - using UDP as default.
+[2020-12-21 19:47:44] [1,14] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.87:27023, UDP)
+[2020-12-21 19:47:45] [1,14] ConnectionCompleted() (205.196.6.75:27019, UDP)
+[2020-12-21 19:47:51] [1,14] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2020-12-21 20:04:03] [0,0] ConnectionDisconnected('I/O Operation Failed') : 'OK' (205.196.6.75:27019, UDP)
+[2020-12-21 20:04:03] [0,0] StartAutoReconnect() will start in 0 seconds
+[2020-12-21 20:04:03] [0,0] Server says 50% of connections should be websockets, we rolled 17 - using WebSockets as default.
+[2020-12-21 20:04:03] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) starting...
+[2020-12-21 20:04:03] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27028) starting...
+[2020-12-21 20:04:03] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27032) starting...
+[2020-12-21 20:04:03] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27031) starting...
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27031) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27032) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27028) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27039) starting...
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27033) starting...
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm3-lax1.cm.steampowered.com:27020) starting...
+[2020-12-21 20:04:04] [0,0] PingWebSocketCM() (cm1-lax1.cm.steampowered.com:443) starting...
+[2020-12-21 20:04:05] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:102::a2fe:c32b]:80 ([2602:801:f006:102::a2fe:c32b]:80)) - TIMEOUT
+[2020-12-21 20:04:05] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:102::a2fe:c023]:27019) - SUCCESS
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm1-lax1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm3-lax1.cm.steampowered.com:27020) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27038) starting...
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27034) starting...
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27029) starting...
+[2020-12-21 20:04:05] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27033) starting...
+[2020-12-21 20:04:06] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27033) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:06] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27029) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:06] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27034) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:06] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27038) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:06] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27032) starting...
+[2020-12-21 20:04:07] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27032) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:07] [1,11] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27033, WebSocket)
+[2020-12-21 20:04:28] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 20:04:28] [0,0] StartAutoReconnect() will start in 6 seconds
+[2020-12-21 20:04:29] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:102::a2fe:c322]:80 ([2602:801:f006:102::a2fe:c322]:80)) - SUCCESS
+[2020-12-21 20:04:29] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:102::a2fe:c322]:80 ([2602:801:f006:102::a2fe:c322]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 20:04:29] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:102::a2fe:c023]:27019) - SUCCESS
+[2020-12-21 20:04:34] [0,0] Server says 50% of connections should be websockets, we rolled 52 - using UDP as default.
+[2020-12-21 20:04:34] [1,18] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.87:27023, UDP)
+[2020-12-21 20:04:35] [1,0] ConnectFailed('Disconnected By Remote Host':0) (205.196.6.75:27017, UDP)
+[2020-12-21 20:04:35] [0,0] StartAutoReconnect() will start in 5 seconds
+[2020-12-21 20:04:40] [0,0] Server says 50% of connections should be websockets, we rolled 12 - using WebSockets as default.
+[2020-12-21 20:04:40] [0,0] Existing WebSocket ping data (cm1-ord1.cm.steampowered.com:27039) results: 100000.0000ms + load 0.0000 (1085 seconds ago)
+[2020-12-21 20:04:40] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) starting...
+[2020-12-21 20:04:40] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27022) starting...
+[2020-12-21 20:04:40] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:443) starting...
+[2020-12-21 20:04:40] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27026) starting...
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27026) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27022) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27026) starting...
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:27021) starting...
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27025) starting...
+[2020-12-21 20:04:41] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:27020) starting...
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:27020) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:27025) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:27021) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27026) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm4-iad1.cm.steampowered.com:443) starting...
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27023) starting...
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27039) starting...
+[2020-12-21 20:04:42] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:443) starting...
+[2020-12-21 20:04:43] [0,0] PingWebSocketCM() (cm3-iad1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:43] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:43] [0,0] PingWebSocketCM() (cm2-iad1.cm.steampowered.com:27023) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:43] [0,0] PingWebSocketCM() (cm4-iad1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:43] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27024) starting...
+[2020-12-21 20:04:44] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27024) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:04:44] [1,15] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27035, WebSocket)
+[2020-12-21 20:05:05] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 20:05:05] [0,0] StartAutoReconnect() will start in 12 seconds
+[2020-12-21 20:05:05] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c005]:80 ([2602:801:f002:101::a2fe:c005]:80)) - SUCCESS
+[2020-12-21 20:05:05] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c005]:80 ([2602:801:f002:101::a2fe:c005]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 20:05:05] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:102::a2fe:c024]:27019) - SUCCESS
+[2020-12-21 20:05:17] [0,0] Server says 50% of connections should be websockets, we rolled 29 - using WebSockets as default.
+[2020-12-21 20:05:17] [0,0] Existing WebSocket ping data (cm1-sea1.cm.steampowered.com:27020) results: 100000.0000ms + load 0.0000 (35 seconds ago)
+[2020-12-21 20:05:17] [0,0] Existing WebSocket ping data (cm6-lax1.cm.steampowered.com:27035) results: 100000.0000ms + load 0.0000 (1122 seconds ago)
+[2020-12-21 20:05:17] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) starting...
+[2020-12-21 20:05:17] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27039) starting...
+[2020-12-21 20:05:17] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27029) starting...
+[2020-12-21 20:05:17] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27030) starting...
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27030) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27029) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27039) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27037) starting...
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27036) starting...
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27036) starting...
+[2020-12-21 20:05:18] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27030) starting...
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27030) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27036) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27036) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27037) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27035) starting...
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:443) starting...
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27035) starting...
+[2020-12-21 20:05:19] [0,0] PingWebSocketCM() (cm1-lax1.cm.steampowered.com:27021) starting...
+[2020-12-21 20:05:20] [0,0] PingWebSocketCM() (cm1-lax1.cm.steampowered.com:27021) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:20] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:20] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:20] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:20] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:27020) starting...
+[2020-12-21 20:05:21] [0,0] PingWebSocketCM() (cm1-sea1.cm.steampowered.com:27020) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:21] [1,19] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27035, WebSocket)
+[2020-12-21 20:05:42] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 20:05:42] [0,0] StartAutoReconnect() will start in 13 seconds
+[2020-12-21 20:05:42] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c005]:80 ([2602:801:f002:101::a2fe:c005]:80)) - SUCCESS
+[2020-12-21 20:05:42] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:101::a2fe:c005]:80 ([2602:801:f002:101::a2fe:c005]:80)) - server indicated we are using ipv6, external address = '2601:283:4003:b930:714c:c4aa:89c0:189e'
+[2020-12-21 20:05:42] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:102::a2fe:c024]:27019) - SUCCESS
+[2020-12-21 20:05:55] [0,0] Server says 50% of connections should be websockets, we rolled 10 - using WebSockets as default.
+[2020-12-21 20:05:55] [0,0] Existing WebSocket ping data (cm2-sea1.cm.steampowered.com:27021) results: 100000.0000ms + load 0.0000 (73 seconds ago)
+[2020-12-21 20:05:55] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) starting...
+[2020-12-21 20:05:55] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27028) starting...
+[2020-12-21 20:05:55] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27029) starting...
+[2020-12-21 20:05:55] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27022) starting...
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm1-okc1.cm.steampowered.com:27022) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27029) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27028) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27035) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27034) starting...
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm4-lax1.cm.steampowered.com:443) starting...
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27037) starting...
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm3-lax1.cm.steampowered.com:443) starting...
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm3-lax1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:56] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27037) starting...
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27037) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm4-lax1.cm.steampowered.com:443) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27034) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27028) starting...
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27030) starting...
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:27021) starting...
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm2-ord1.cm.steampowered.com:27037) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:57] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27034) starting...
+[2020-12-21 20:05:58] [0,0] PingWebSocketCM() (cm2-sea1.cm.steampowered.com:27021) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:58] [0,0] PingWebSocketCM() (cm5-lax1.cm.steampowered.com:27030) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:58] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27028) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:58] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27034) failed talking to cm (timeout/neterror - Invalid)
+[2020-12-21 20:05:58] [1,23] Connect() starting connection (eNetQOSLevelHigh, cm5-lax1.cm.steampowered.com:27035, WebSocket)
+[2020-12-21 20:06:19] [1,0] ConnectFailed('Connection Failed':0) (0.0.0.0:0, WebSocket)
+[2020-12-21 20:06:19] [0,0] StartAutoReconnect() will start in 13 seconds
+[2020-12-21 20:06:21] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f006:100::a2fe:c31a]:80 ([2602:801:f006:100::a2fe:c31a]:80)) - TIMEOUT
+[2020-12-21 20:06:21] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:102::a2fe:c023]:27019) - SUCCESS
+[2020-12-21 20:06:32] [0,0] Server says 50% of connections should be websockets, we rolled 0 - using WebSockets as default.
+[2020-12-21 20:06:32] [1,22] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.66:27018, UDP)
+[2020-12-21 20:06:43] [1,22] ConnectionCompleted() (162.254.195.67:27019, UDP)
+[2020-12-21 20:06:48] [1,22] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2020-12-21 20:23:00] CClientJobGetClientUpdateHosts: cached version not expired
+
+
+[2021-03-13 13:20:21] Log session started
+[2021-03-13 13:20:21] [0,0] SetSteamID( [U:1:0] )
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-13 13:20:21] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:102::a2fe:c02b]:80 ([2602:801:f002:102::a2fe:c02b]:80)) - SUCCESS
+[2021-03-13 13:20:21] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:102::a2fe:c02b]:80 ([2602:801:f002:102::a2fe:c02b]:80)) - server indicated we are using ipv6, external address = '2601:283:4004:3320:49dc:75d5:60a5:cc6a'
+[2021-03-13 13:20:21] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f006:100::a2fe:c31a]:27019) - SUCCESS
+[2021-03-13 13:20:38] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-13 13:20:38] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-13 13:20:38] [0,0] Server says 50% of connections should be websockets, we rolled 43 - using WebSockets as default.
+[2021-03-13 13:20:38] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:27026) starting...
+[2021-03-13 13:20:38] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27038) starting...
+[2021-03-13 13:20:38] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27032) starting...
+[2021-03-13 13:20:38] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27038) starting...
+[2021-03-13 13:20:39] [0,0] PingWebSocketCM() (cm1-ord1.cm.steampowered.com:27038) results: 49.0170ms + load 28.0000
+[2021-03-13 13:20:39] [0,0] PingWebSocketCM() stopping early for good host (cm1-ord1.cm.steampowered.com:27038)
+[2021-03-13 13:20:39] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27032) results: 49.0360ms + load 13.0000
+[2021-03-13 13:20:39] [0,0] PingWebSocketCM() (cm6-lax1.cm.steampowered.com:27038) results: 48.9864ms + load 14.0000
+[2021-03-13 13:20:39] [0,0] PingWebSocketCM() (cm1-iad1.cm.steampowered.com:27026) results: 97.8870ms + load 30.0000
+[2021-03-13 13:20:39] [1,3] Connect() starting connection (eNetQOSLevelHigh, cm6-lax1.cm.steampowered.com:27032, WebSocket)
+[2021-03-13 13:20:39] [1,3] ConnectionCompleted() (162.254.195.87:27032, WebSocket)
+[2021-03-13 13:20:39] [1,3] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2021-03-13 13:20:39] CClientJobGetClientUpdateHosts: received update from server
+[2021-03-13 13:20:39] CClientJobGetClientUpdateHosts: cached copy new expiration: Mon Mar 15 11:26:36 2021
+
+
+[2021-03-21 16:27:49] Log session started
+[2021-03-21 16:27:49] [0,0] SetSteamID( [U:1:0] )
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:50] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:27:52] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f008:100::a2fe:c783]:80 ([2602:801:f008:100::a2fe:c783]:80)) - TIMEOUT
+[2021-03-21 16:27:54] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / 2602:801:f002:101::a2fe:c00d) - TIMEOUT
+[2021-03-21 16:27:57] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-21 16:27:57] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-21 16:27:57] [0,0] Server says 50% of connections should be websockets, we rolled 63 - using UDP as default.
+[2021-03-21 16:27:57] [1,2] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.71:27025, UDP)
+[2021-03-21 16:27:57] [1,2] ConnectionCompleted() (162.254.195.67:27018, UDP)
+[2021-03-21 16:27:58] [1,2] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2021-03-21 16:27:58] CClientJobGetClientUpdateHosts: cached copy new expiration: Tue Mar 23 05:09:16 2021
+
+
+[2021-03-21 16:46:51] Log session started
+[2021-03-21 16:46:51] [0,0] SetSteamID( [U:1:0] )
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:51] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-03-21 16:46:53] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f007:100::a2fe:c10e]:80 ([2602:801:f007:100::a2fe:c10e]:80)) - TIMEOUT
+[2021-03-21 16:46:55] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / 2602:801:f006:100::a2fe:c30e) - TIMEOUT
+[2021-03-21 16:46:56] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-21 16:46:56] [0,0] SetSteamID( [U:1:118723006] )
+[2021-03-21 16:46:56] [0,0] Server says 50% of connections should be websockets, we rolled 92 - using UDP as default.
+[2021-03-21 16:46:56] [1,2] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.87:27019, UDP)
+[2021-03-21 16:46:57] [1,2] ConnectionCompleted() (162.254.195.67:27017, UDP)
+[2021-03-21 16:46:57] [1,2] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2021-03-21 16:46:57] CClientJobGetClientUpdateHosts: cached version not expired
+
+
+[2021-05-01 14:36:37] Log session started
+[2021-05-01 14:36:37] [0,0] SetSteamID( [U:1:0] )
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] CCMInterface::OnNetworkDeviceStateChange -- Saw device up, connecting to Steam
+[2021-05-01 14:36:37] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:102::a2fe:c02c]:80 ([2602:801:f002:102::a2fe:c02c]:80)) - SUCCESS
+[2021-05-01 14:36:37] IPv6 HTTP connectivity test (ipv6check-http.steamcontent.com / [2602:801:f002:102::a2fe:c02c]:80 ([2602:801:f002:102::a2fe:c02c]:80)) - server indicated we are using ipv6, external address = '2601:283:4004:3320:c986:8491:c731:c261'
+[2021-05-01 14:36:37] IPv6 UDP connectivity test (ipv6check-udp.steamcontent.com / [2602:801:f002:101::a2fe:c004]:27019) - SUCCESS
+[2021-05-01 14:36:45] [0,0] SetSteamID( [U:1:118723006] )
+[2021-05-01 14:36:45] [0,0] SetSteamID( [U:1:118723006] )
+[2021-05-01 14:36:45] [0,0] Server says 50% of connections should be websockets, we rolled 78 - using UDP as default.
+[2021-05-01 14:36:45] [1,2] Connect() starting connection (eNetQOSLevelHigh, 162.254.195.71:27019, UDP)
+[2021-05-01 14:36:46] [1,2] ConnectionCompleted() (162.254.195.67:27017, UDP)
+[2021-05-01 14:36:46] [1,2] RecvMsgClientLogOnResponse() : [U:1:118723006] 'OK'
+[2021-05-01 14:36:46] CClientJobGetClientUpdateHosts: cached copy new expiration: Sun May  2 19:10:24 2021

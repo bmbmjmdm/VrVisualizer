@@ -1,0 +1,48 @@
+Release by going to Build in leftmost top menu item, then Run Build and pick a folder
+Use the include steamworks folder to upload
+
+Visualizer
+Core
+-Improve performance (stuttering) caused by: bunnies, trees, candles, neon stones?, flowers?
+-https://docs.unity3d.com/Manual/GPUInstancing.html
+-https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/performance-recommendations-for-unity#dynamic-batching
+-https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/performance-recommendations-for-unity#unity-standard-shader-alternatives
+-https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/performance-recommendations-for-unity#startup-performance
+-https://docs.unity3d.com/Manual/OptimizingGraphicsPerformance.html
+-maybe get rigid bodies of things when theyre created rather than during update (galaxies, trees, bunies, etc)
+-CRYSTALS take up 36k objects by the time their object pool is filled out
+
+STRETCH semi-core
+-improve continuousspectrum (by making average slightly lower, either make threshhold to consider frequency into average or just subtracting a constant)
+-add beat detection using > 0.9 continuous spectrum av
+-fix so many objects causing lag (all scenes)
+-need something that feels like someone else dancing with you
+
+STRETCH non-core
+-make things come out of your hands when you press the trigger (bird flies out, tree bops up around you, etc)
+--make noise when you spawn things from hands
+-move between scenes with button press
+-make trees normalized 
+(multiple different art styles is meh)
+-camera effects
+-Buttons:
+=Right hand: trigger creates a single effect on your hand (launches a tree into the air, spawns a bird that flies and dies, blows up a single firework. etc), A/B cycle back/forward through effects
+=Left hand: trigger randomizes a scene for you, A adds a single effect to the scene, B removes the last effect added (the scene made by trigger adds all those effects to the history so they can be removed)
+=Make certain, specific movements trigger some effects. Air drumming, jumping, etc
+-Improve beat detection
+=make spike detection require multiple spectrum buckets to simultaniously have spikes in order to consider an overall one
+
+EFFECT IDEAS:
+-stars or candle light in the darkness: randomly placed points of light on the beat.
+-like the stars/candles but instead a painting: points of color instead of lights, color them with theb eat, maybe group them in certain arreas, with those groupings moving with the beat (perhaps group is same color). think those moving visions when u meditate
+-strings wiggling through the air, becoming seen and unseen with the beat (or maybe parts of them seen and unseen)
+-planet rings hanging just above user's head (below planets) that expand/contract
+(open/close) or maybe shift around?
+-butterflies hovering, drift up/down
+=https://assetstore.unity.com/packages/3d/characters/animals/butterfly-animated-58355
+=https://assetstore.unity.com/packages/3d/characters/animals/butterfly-with-animations-20985
+-cat? walking, sitting, etc?
+=https://assetstore.unity.com/packages/3d/characters/animals/free-chibi-cat-165490
+-mouth saying "o"
+-clouds
+-holes

@@ -1,0 +1,54 @@
+
+
+[2020-12-21 19:23:00] Failed to get ParentalSettings\Settings from config file for account ID 118723006
+[2020-12-21 19:23:00] Got parental settings for account ID 118723006
+[2020-12-21 19:47:51] Validating parental settings
+[2020-12-21 19:47:51] Settings dump:
+[2020-12-21 19:47:51] 	Account ID: 118723006
+[2020-12-21 19:47:51] 	Enabled: false
+[2020-12-21 19:47:51] 	Base list: 0 ()
+[2020-12-21 19:47:51] 	No custom list
+[2020-12-21 19:47:51] 	No enabled features
+[2020-12-21 20:06:48] Validating parental settings
+[2020-12-21 20:06:48] Settings dump:
+[2020-12-21 20:06:48] 	Account ID: 118723006
+[2020-12-21 20:06:48] 	Enabled: false
+[2020-12-21 20:06:48] 	Base list: 0 ()
+[2020-12-21 20:06:48] 	No custom list
+[2020-12-21 20:06:48] 	No enabled features
+
+
+[2021-03-13 13:20:39] Validating parental settings
+[2021-03-13 13:20:39] Settings dump:
+[2021-03-13 13:20:39] 	Account ID: 118723006
+[2021-03-13 13:20:39] 	Enabled: false
+[2021-03-13 13:20:39] 	Base list: 0 ()
+[2021-03-13 13:20:39] 	No custom list
+[2021-03-13 13:20:39] 	No enabled features
+
+
+[2021-03-21 16:27:58] Validating parental settings
+[2021-03-21 16:27:58] Settings dump:
+[2021-03-21 16:27:58] 	Account ID: 118723006
+[2021-03-21 16:27:58] 	Enabled: false
+[2021-03-21 16:27:58] 	Base list: 0 ()
+[2021-03-21 16:27:58] 	No custom list
+[2021-03-21 16:27:58] 	No enabled features
+
+
+[2021-03-21 16:46:57] Validating parental settings
+[2021-03-21 16:46:57] Settings dump:
+[2021-03-21 16:46:57] 	Account ID: 118723006
+[2021-03-21 16:46:57] 	Enabled: false
+[2021-03-21 16:46:57] 	Base list: 0 ()
+[2021-03-21 16:46:57] 	No custom list
+[2021-03-21 16:46:57] 	No enabled features
+
+
+[2021-05-01 14:36:46] Validating parental settings
+[2021-05-01 14:36:46] Settings dump:
+[2021-05-01 14:36:46] 	Account ID: 118723006
+[2021-05-01 14:36:46] 	Enabled: false
+[2021-05-01 14:36:46] 	Base list: 0 ()
+[2021-05-01 14:36:46] 	No custom list
+[2021-05-01 14:36:46] 	No enabled features

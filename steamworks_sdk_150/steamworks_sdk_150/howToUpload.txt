@@ -1,0 +1,5 @@
+copy contents of unity build folder into C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\content
+run steamcmd in C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder
+run login with username + password
+run: 
+run_app_build "C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\scripts\app_build_1000.vdf"

@@ -1,0 +1,91 @@
+
+
+[2020-12-21 18:56:28] Failed to read store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2020-12-21 18:56:28] Failed to read store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2020-12-21 18:56:28] Failed to read store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf.tmp'
+[2020-12-21 18:56:28] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 18:56:29] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 18:56:30] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+
+
+[2020-12-21 19:21:33] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2020-12-21 19:21:33] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2020-12-21 19:22:39] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2020-12-21 19:22:39] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:23:00] Failed to read store 'userlocal' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf.tmp'
+[2020-12-21 19:23:00] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:23:00] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:23:01] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:23:01] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:23:05] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:23:06] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:23:06] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:38:01] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:46:36] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:47:04] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:47:54] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 19:47:55] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 19:48:08] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 20:02:54] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 20:04:05] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:04:07] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:04:30] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:04:44] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:05:21] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:05:59] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:06:22] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:06:50] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2020-12-21 20:06:50] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 20:07:09] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2020-12-21 20:21:49] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+
+
+[2021-03-13 13:20:21] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-13 13:20:21] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-13 13:20:22] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-13 13:20:38] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-13 13:20:38] Loaded store 'userlocal' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf' successfully
+[2021-03-13 13:20:39] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-13 13:20:40] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-13 13:20:40] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-13 13:20:40] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-13 13:20:41] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-13 13:20:42] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-13 13:20:45] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+
+
+[2021-03-21 16:27:49] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:27:49] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:27:52] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:27:54] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:27:57] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:27:57] Loaded store 'userlocal' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf' successfully
+[2021-03-21 16:27:57] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:27:58] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:27:58] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-21 16:27:59] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-21 16:28:00] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:28:00] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+
+
+[2021-03-21 16:46:51] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:46:51] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:46:56] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-03-21 16:46:56] Loaded store 'userlocal' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf' successfully
+[2021-03-21 16:46:57] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:46:57] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-03-21 16:46:58] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-21 16:46:58] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-03-21 16:46:59] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+
+
+[2021-05-01 14:36:37] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-05-01 14:36:37] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-05-01 14:36:37] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-05-01 14:36:45] Loaded store 'install' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf' successfully
+[2021-05-01 14:36:45] Loaded store 'userlocal' from 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf' successfully
+[2021-05-01 14:36:45] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-05-01 14:36:46] Flushed store 'install' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\config\config.vdf'
+[2021-05-01 14:36:46] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-05-01 14:36:49] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
+[2021-05-01 14:36:50] Flushed store 'userlocal' to 'C:\Users\Dale 2.0\Downloads\steamworks_sdk_150\sdk\tools\ContentBuilder\builder\userdata\118723006\config\localconfig.vdf'
